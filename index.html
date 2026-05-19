@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPN Infrastructure Atlas</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --panel: #ffffff;
+      --text: #17202a;
+      --muted: #687386;
+      --line: #dbe2ea;
+      --accent: #1667d9;
+      --accent-soft: #e9f1ff;
+      --good: #0b7a53;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 22px 28px 12px;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 980px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    main {
+      padding: 18px 28px 28px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .toolbar,
+    .stats,
+    .grid,
+    .atlas-layout {
+      display: grid;
+      gap: 12px;
+    }
+
+    .toolbar {
+      grid-template-columns: minmax(170px, 220px) minmax(150px, 190px) minmax(150px, 210px) minmax(130px, 160px) minmax(180px, 1fr);
+      align-items: end;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      text-transform: uppercase;
+    }
+
+    select,
+    input {
+      width: 100%;
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: #fff;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .stats {
+      grid-template-columns: repeat(5, minmax(120px, 1fr));
+    }
+
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .panel {
+      min-width: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .panel h2 {
+      margin: 0;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .atlas-layout {
+      grid-template-columns: minmax(520px, 1.2fr) minmax(360px, .8fr);
+      align-items: start;
+    }
+
+    #map {
+      width: 100%;
+      height: 590px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th,
+    td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      white-space: normal;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: #f9fbfd;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    td:nth-child(n+3),
+    th:nth-child(n+3) {
+      text-align: right;
+    }
+
+    td:first-child,
+    th:first-child {
+      width: 36%;
+    }
+
+    .table-wrap {
+      max-height: 278px;
+      overflow: auto;
+    }
+
+    .side-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 0;
+      padding: 0 14px;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+    }
+
+    .info-row b {
+      color: var(--text);
+    }
+
+    .info-row span {
+      color: var(--muted);
+    }
+
+    details.panel {
+      display: block;
+    }
+
+    details.panel summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    details.panel summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.panel summary::after {
+      content: "+";
+      float: right;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    details.panel[open] summary::after {
+      content: "-";
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      padding: 10px 14px 13px;
+      border-top: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 0 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    @media (max-width: 920px) {
+      header,
+      main {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .toolbar,
+      .stats,
+      .grid,
+      .atlas-layout {
+        grid-template-columns: 1fr;
+      }
+
+      #map {
+        height: 420px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VPN Infrastructure Atlas</h1>
+    <p class="subtitle">
+      Static aggregate dashboard for VPN endpoint infrastructure. The dataset summarizes observed provider footprints by country and ASN without publishing raw VPN configuration files or full per-IP evidence.
+    </p>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Dashboard filters">
+      <label>
+        Provider
+        <select id="provider"></select>
+      </label>
+      <label>
+        Map metric
+        <select id="metric">
+          <option value="ip_count">IP count</option>
+          <option value="prefix_count">/24 prefix count</option>
+          <option value="asn_count">ASN count</option>
+          <option value="hosting_ip_count">Hosting IP count</option>
+        </select>
+      </label>
+      <label>
+        Country
+        <select id="country"></select>
+      </label>
+      <label>
+        Min IPs
+        <select id="minIps">
+          <option value="0">All</option>
+          <option value="5">5+</option>
+          <option value="10">10+</option>
+          <option value="25">25+</option>
+          <option value="100">100+</option>
+        </select>
+      </label>
+      <label>
+        Table search
+        <input id="search" type="search" placeholder="Provider or country">
+      </label>
+    </section>
+
+    <section class="stats" aria-label="Summary">
+      <div class="stat"><b id="statProviders">-</b><span>providers</span></div>
+      <div class="stat"><b id="statCountries">-</b><span>countries</span></div>
+      <div class="stat"><b id="statAsns">-</b><span>ASNs</span></div>
+      <div class="stat"><b id="statIps">-</b><span>observed IPs</span></div>
+      <div class="stat"><b id="statUpdated">-</b><span>generated</span></div>
+    </section>
+
+    <section class="atlas-layout">
+      <div class="panel">
+        <h2>Reported Endpoint Country Footprint <span class="badge" id="activeMetric">IP count</span></h2>
+        <div id="map"></div>
+        <div class="note">
+          Countries are reported/enriched endpoint locations. Values may come from provider metadata, config filenames, scraped location labels, or Geo MMDB fallback when source metadata is missing. They are not ASN registration country, provider ownership country, or company jurisdiction.
+        </div>
+      </div>
+
+      <div class="side-stack">
+        <div class="panel">
+          <h2>Top ASN Footprint</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>ASN / Org</th>
+                  <th>IPs</th>
+                  <th>/24</th>
+                  <th>Countries</th>
+                </tr>
+              </thead>
+              <tbody id="asnRows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Top Reported Endpoint Country Footprint</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>Endpoint country</th>
+                  <th>IPs</th>
+                  <th>/24</th>
+                  <th>ASNs</th>
+                </tr>
+              </thead>
+              <tbody id="countryRows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <details class="panel">
+          <summary>Method & Legal Notes</summary>
+          <div class="info-list">
+            <div class="info-row">
+              <b>Scope</b>
+              <span>Aggregate VPN provider footprint only. Tor, proxy, and relay records are excluded from this public atlas.</span>
+            </div>
+            <div class="info-row">
+              <b>No raw configs</b>
+              <span>This page does not redistribute VPN configuration files, client assets, credentials, tokens, or raw provider responses.</span>
+            </div>
+            <div class="info-row">
+              <b>Interpretation</b>
+              <span>Reported country and ASN values are infrastructure context signals. Reported country may come from provider metadata, source labels, filename heuristics, or Geo MMDB fallback. It is not provider ownership, company jurisdiction, affiliation, abuse, or malicious activity.</span>
+            </div>
+            <div class="info-row">
+              <b>License</b>
+              <span>Recommended public license: CC BY 4.0 for aggregate CSV/README content. Keep collector code and raw evidence under a separate private or source-code license.</span>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const files = {
+      providerCountry: "data/provider_country.csv",
+      providerAsn: "data/provider_asn.csv",
+      metadata: "data/metadata.json"
+    };
+
+    const state = {
+      providerCountry: [],
+      providerAsn: [],
+      metadata: {},
+      provider: "All",
+      country: "All",
+      minIps: 0,
+      metric: "ip_count",
+      search: ""
+    };
+
+    const metricLabels = {
+      ip_count: "IP count",
+      prefix_count: "/24 prefix count",
+      asn_count: "ASN count",
+      hosting_ip_count: "Hosting IP count"
+    };
+
+    const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+
+    function countryName(code) {
+      if (!code || code === "ZZ") {
+        return "Unknown";
+      }
+      try {
+        return `${regionNames.of(code)} (${code})`;
+      } catch {
+        return code;
+      }
+    }
+
+    function parseCsv(text) {
+      const rows = [];
+      let row = [];
+      let value = "";
+      let quoted = false;
+      for (let i = 0; i < text.length; i += 1) {
+        const ch = text[i];
+        const next = text[i + 1];
+        if (quoted) {
+          if (ch === '"' && next === '"') {
+            value += '"';
+            i += 1;
+          } else if (ch === '"') {
+            quoted = false;
+          } else {
+            value += ch;
+          }
+        } else if (ch === '"') {
+          quoted = true;
+        } else if (ch === ",") {
+          row.push(value);
+          value = "";
+        } else if (ch === "\n") {
+          row.push(value);
+          rows.push(row);
+          row = [];
+          value = "";
+        } else if (ch !== "\r") {
+          value += ch;
+        }
+      }
+      if (value || row.length) {
+        row.push(value);
+        rows.push(row);
+      }
+      const header = rows.shift() || [];
+      return rows
+        .filter((items) => items.length === header.length)
+        .map((items) => Object.fromEntries(header.map((key, index) => [key, items[index]])));
+    }
+
+    function intValue(row, key) {
+      return Number.parseInt(row[key] || "0", 10) || 0;
+    }
+
+    function formatNumber(value) {
+      return new Intl.NumberFormat("en-US").format(value);
+    }
+
+    function filtered(rows) {
+      const query = state.search.trim().toLowerCase();
+      return rows.filter((row) => {
+        if (state.provider !== "All" && row.provider !== state.provider) {
+          return false;
+        }
+        if (state.country !== "All") {
+          const countries = (row.countries || row.country || "").split(/\s+/);
+          if (!countries.includes(state.country)) {
+            return false;
+          }
+        }
+        if (intValue(row, "ip_count") < state.minIps) {
+          return false;
+        }
+        if (!query) {
+          return true;
+        }
+        return Object.values(row).join(" ").toLowerCase().includes(query);
+      });
+    }
+
+    function setProviders() {
+      const providers = Array.from(new Set(state.providerCountry.map((row) => row.provider))).sort();
+      const select = document.getElementById("provider");
+      select.innerHTML = ["All", ...providers]
+        .map((provider) => `<option value="${provider}">${provider}</option>`)
+        .join("");
+    }
+
+    function setCountries() {
+      const countries = Array.from(new Set(state.providerCountry.map((row) => row.country)))
+        .filter((country) => country && country !== "ZZ")
+        .sort();
+      const select = document.getElementById("country");
+      select.innerHTML = ["All", ...countries]
+        .map((country) => `<option value="${country}">${country === "All" ? "All" : countryName(country)}</option>`)
+        .join("");
+    }
+
+    function updateStats() {
+      const countries = filtered(state.providerCountry);
+      const asns = filtered(state.providerAsn);
+      const providers = new Set(countries.map((row) => row.provider));
+      const countryCodes = new Set(countries.map((row) => row.country));
+      const asnIds = new Set(asns.map((row) => row.asn));
+      const ipTotal = countries.reduce((sum, row) => sum + intValue(row, "ip_count"), 0);
+      document.getElementById("statProviders").textContent = formatNumber(providers.size || (state.provider === "All" ? state.metadata.providers : 1));
+      document.getElementById("statCountries").textContent = formatNumber(countryCodes.size);
+      document.getElementById("statAsns").textContent = formatNumber(asnIds.size);
+      document.getElementById("statIps").textContent = formatNumber(ipTotal);
+      document.getElementById("statUpdated").textContent = (state.metadata.generated_at || "-").slice(0, 10);
+      document.getElementById("activeMetric").textContent = metricLabels[state.metric];
+    }
+
+    function updateMap() {
+      const countryTotals = new Map();
+      for (const row of filtered(state.providerCountry)) {
+        const key = row.country || "ZZ";
+        countryTotals.set(key, (countryTotals.get(key) || 0) + intValue(row, state.metric));
+      }
+      const codes = Array.from(countryTotals.keys()).filter((code) => /^[A-Z]{2}$/.test(code));
+      const locations = codes.map((code) => regionNames.of(code));
+      const values = codes.map((code) => countryTotals.get(code));
+      Plotly.react("map", [{
+        type: "choropleth",
+        locationmode: "country names",
+        locations,
+        z: values,
+        text: codes.map((code, index) => `${code} - ${locations[index]}: ${formatNumber(countryTotals.get(code))}`),
+        colorscale: [
+          [0, "#eaf1fb"],
+          [0.35, "#94b8e8"],
+          [0.7, "#3f7fd2"],
+          [1, "#154d9a"]
+        ],
+        marker: { line: { color: "#ffffff", width: 0.4 } },
+        colorbar: { title: metricLabels[state.metric] }
+      }], {
+        margin: { t: 4, r: 4, b: 4, l: 4 },
+        paper_bgcolor: "#ffffff",
+        geo: {
+          projection: { type: "natural earth" },
+          showframe: false,
+          showcoastlines: true,
+          coastlinecolor: "#ced7e2",
+          showland: true,
+          landcolor: "#f2f5f8",
+          bgcolor: "#ffffff"
+        }
+      }, {
+        displayModeBar: false,
+        responsive: true
+      });
+    }
+
+    function renderRows() {
+      const asnRows = filtered(state.providerAsn)
+        .sort((a, b) => intValue(b, "ip_count") - intValue(a, "ip_count"))
+        .slice(0, 60);
+      document.getElementById("asnRows").innerHTML = asnRows.map((row) => `
+        <tr>
+          <td>${row.provider}</td>
+          <td><b>AS${row.asn}</b><br>${row.asn_org || "Unknown"}</td>
+          <td>${formatNumber(intValue(row, "ip_count"))}</td>
+          <td>${formatNumber(intValue(row, "prefix_count"))}</td>
+          <td>${(row.countries || "").split(/\s+/).filter(Boolean).map(countryName).join(", ") || "-"}</td>
+        </tr>
+      `).join("");
+
+      const countryRows = filtered(state.providerCountry)
+        .sort((a, b) => intValue(b, "ip_count") - intValue(a, "ip_count"))
+        .slice(0, 60);
+      document.getElementById("countryRows").innerHTML = countryRows.map((row) => `
+        <tr>
+          <td>${row.provider}</td>
+          <td>${countryName(row.country)}</td>
+          <td>${formatNumber(intValue(row, "ip_count"))}</td>
+          <td>${formatNumber(intValue(row, "prefix_count"))}</td>
+          <td>${formatNumber(intValue(row, "asn_count"))}</td>
+        </tr>
+      `).join("");
+    }
+
+    function update() {
+      updateStats();
+      updateMap();
+      renderRows();
+    }
+
+    async function init() {
+      const [providerCountryText, providerAsnText, metadata] = await Promise.all([
+        fetch(files.providerCountry).then((response) => response.text()),
+        fetch(files.providerAsn).then((response) => response.text()),
+        fetch(files.metadata).then((response) => response.json())
+      ]);
+      state.providerCountry = parseCsv(providerCountryText);
+      state.providerAsn = parseCsv(providerAsnText);
+      state.metadata = metadata;
+      setProviders();
+      setCountries();
+      document.getElementById("provider").addEventListener("change", (event) => {
+        state.provider = event.target.value;
+        update();
+      });
+      document.getElementById("metric").addEventListener("change", (event) => {
+        state.metric = event.target.value;
+        update();
+      });
+      document.getElementById("country").addEventListener("change", (event) => {
+        state.country = event.target.value;
+        update();
+      });
+      document.getElementById("minIps").addEventListener("change", (event) => {
+        state.minIps = Number.parseInt(event.target.value, 10) || 0;
+        update();
+      });
+      document.getElementById("search").addEventListener("input", (event) => {
+        state.search = event.target.value;
+        renderRows();
+        updateStats();
+      });
+      update();
+    }
+
+    init().catch((error) => {
+      document.querySelector("main").innerHTML = `<section class="panel"><h2>Load error</h2><div class="note">${error.message}</div></section>`;
+      console.error(error);
+    });
+  </script>
+</body>
+</html>
