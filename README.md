@@ -10,6 +10,10 @@ This repository does **not** publish raw VPN IP lists. It publishes aggregate si
 
 The project is designed for defensive research, fraud/risk feature engineering, source-quality review, and VPN/proxy detection methodology.
 
+![VPN Infrastructure Atlas dashboard](assets/vpn-infrastructure-atlas.jpg)
+
+**Open the interactive atlas:** https://ipanalytics.github.io/VPN-Infrastructure-Atlas/
+
 ## GitHub Summary
 
 **Suggested repo description:**
