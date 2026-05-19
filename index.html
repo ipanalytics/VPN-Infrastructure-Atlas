@@ -65,7 +65,7 @@
     }
 
     .toolbar {
-      grid-template-columns: minmax(170px, 220px) minmax(150px, 190px) minmax(150px, 210px) minmax(130px, 160px) minmax(180px, 1fr);
+      grid-template-columns: minmax(160px, 210px) minmax(150px, 185px) minmax(150px, 210px) minmax(180px, 260px) minmax(120px, 150px) minmax(170px, 1fr);
       align-items: end;
       background: var(--panel);
       border: 1px solid var(--line);
@@ -320,6 +320,10 @@
         <select id="country"></select>
       </label>
       <label>
+        ASN
+        <select id="asn"></select>
+      </label>
+      <label>
         Min IPs
         <select id="minIps">
           <option value="0">All</option>
@@ -416,17 +420,20 @@
 
   <script>
     const files = {
+      providerCountryAsn: "data/provider_country_asn.csv",
       providerCountry: "data/provider_country.csv",
       providerAsn: "data/provider_asn.csv",
       metadata: "data/metadata.json"
     };
 
     const state = {
+      providerCountryAsn: [],
       providerCountry: [],
       providerAsn: [],
       metadata: {},
       provider: "All",
       country: "All",
+      asn: "All",
       minIps: 0,
       metric: "ip_count",
       search: ""
@@ -501,53 +508,144 @@
       return new Intl.NumberFormat("en-US").format(value);
     }
 
-    function filtered(rows) {
+    function rowMatches(row, exclude = "") {
       const query = state.search.trim().toLowerCase();
-      return rows.filter((row) => {
-        if (state.provider !== "All" && row.provider !== state.provider) {
-          return false;
-        }
-        if (state.country !== "All") {
-          const countries = (row.countries || row.country || "").split(/\s+/);
-          if (!countries.includes(state.country)) {
-            return false;
-          }
-        }
-        if (intValue(row, "ip_count") < state.minIps) {
-          return false;
-        }
-        if (!query) {
-          return true;
-        }
-        return Object.values(row).join(" ").toLowerCase().includes(query);
-      });
+      if (exclude !== "provider" && state.provider !== "All" && row.provider !== state.provider) {
+        return false;
+      }
+      if (exclude !== "country" && state.country !== "All" && row.country !== state.country) {
+        return false;
+      }
+      if (exclude !== "asn" && state.asn !== "All" && row.asn !== state.asn) {
+        return false;
+      }
+      if (exclude !== "minIps" && intValue(row, "ip_count") < state.minIps) {
+        return false;
+      }
+      if (!query) {
+        return true;
+      }
+      return Object.values(row).join(" ").toLowerCase().includes(query);
+    }
+
+    function filteredBase(exclude = "") {
+      return state.providerCountryAsn.filter((row) => rowMatches(row, exclude));
     }
 
     function setProviders() {
-      const providers = Array.from(new Set(state.providerCountry.map((row) => row.provider))).sort();
+      const providers = Array.from(new Set(filteredBase("provider").map((row) => row.provider))).sort();
       const select = document.getElementById("provider");
+      const current = state.provider;
       select.innerHTML = ["All", ...providers]
         .map((provider) => `<option value="${provider}">${provider}</option>`)
         .join("");
+      if (current !== "All" && providers.includes(current)) {
+        select.value = current;
+      } else {
+        state.provider = "All";
+        select.value = "All";
+      }
     }
 
     function setCountries() {
-      const countries = Array.from(new Set(state.providerCountry.map((row) => row.country)))
+      const countries = Array.from(new Set(filteredBase("country").map((row) => row.country)))
         .filter((country) => country && country !== "ZZ")
         .sort();
       const select = document.getElementById("country");
+      const current = state.country;
       select.innerHTML = ["All", ...countries]
         .map((country) => `<option value="${country}">${country === "All" ? "All" : countryName(country)}</option>`)
         .join("");
+      if (current !== "All" && countries.includes(current)) {
+        select.value = current;
+      } else {
+        state.country = "All";
+        select.value = "All";
+      }
+    }
+
+    function asnLabel(row) {
+      const org = row.asn_org ? ` - ${row.asn_org}` : "";
+      return row.asn === "0" ? `Unknown ASN${org}` : `AS${row.asn}${org}`;
+    }
+
+    function setAsns() {
+      const byAsn = new Map();
+      for (const row of filteredBase("asn")) {
+        if (!row.asn || row.asn === "0") {
+          continue;
+        }
+        if (!byAsn.has(row.asn)) {
+          byAsn.set(row.asn, row);
+        }
+      }
+      const rows = Array.from(byAsn.values())
+        .sort((a, b) => asnLabel(a).localeCompare(asnLabel(b)));
+      const select = document.getElementById("asn");
+      const current = state.asn;
+      select.innerHTML = ["All", ...rows.map((row) => row.asn)]
+        .map((asn) => {
+          if (asn === "All") {
+            return '<option value="All">All</option>';
+          }
+          return `<option value="${asn}">${asnLabel(byAsn.get(asn))}</option>`;
+        })
+        .join("");
+      if (current !== "All" && byAsn.has(current)) {
+        select.value = current;
+      } else {
+        state.asn = "All";
+        select.value = "All";
+      }
+    }
+
+    function syncFilterOptions() {
+      setProviders();
+      setCountries();
+      setAsns();
+    }
+
+    function aggregateBy(keys, rows) {
+      const out = new Map();
+      for (const row of rows) {
+        const id = keys.map((key) => row[key] || "").join("\u0000");
+        if (!out.has(id)) {
+          const item = Object.fromEntries(keys.map((key) => [key, row[key] || ""]));
+          item.asn_org = row.asn_org || "";
+          item.countries = new Set();
+          item.asns = new Set();
+          item.ip_count = 0;
+          item.prefix_count = 0;
+          item.hosting_ip_count = 0;
+          item.exit_node_count = 0;
+          out.set(id, item);
+        }
+        const item = out.get(id);
+        item.ip_count += intValue(row, "ip_count");
+        item.prefix_count += intValue(row, "prefix_count");
+        item.hosting_ip_count += intValue(row, "hosting_ip_count");
+        item.exit_node_count += intValue(row, "exit_node_count");
+        if (row.country && row.country !== "ZZ") {
+          item.countries.add(row.country);
+        }
+        if (row.asn && row.asn !== "0") {
+          item.asns.add(row.asn);
+        }
+      }
+      return Array.from(out.values()).map((item) => ({
+        ...item,
+        country_count: item.countries.size,
+        asn_count: item.asns.size,
+        countries: Array.from(item.countries).sort().join(" ")
+      }));
     }
 
     function updateStats() {
-      const countries = filtered(state.providerCountry);
-      const asns = filtered(state.providerAsn);
-      const providers = new Set(countries.map((row) => row.provider));
-      const countryCodes = new Set(countries.map((row) => row.country));
-      const asnIds = new Set(asns.map((row) => row.asn));
-      const ipTotal = countries.reduce((sum, row) => sum + intValue(row, "ip_count"), 0);
+      const rows = filteredBase();
+      const providers = new Set(rows.map((row) => row.provider));
+      const countryCodes = new Set(rows.map((row) => row.country).filter((country) => country && country !== "ZZ"));
+      const asnIds = new Set(rows.map((row) => row.asn).filter((asn) => asn && asn !== "0"));
+      const ipTotal = rows.reduce((sum, row) => sum + intValue(row, "ip_count"), 0);
       document.getElementById("statProviders").textContent = formatNumber(providers.size || (state.provider === "All" ? state.metadata.providers : 1));
       document.getElementById("statCountries").textContent = formatNumber(countryCodes.size);
       document.getElementById("statAsns").textContent = formatNumber(asnIds.size);
@@ -558,19 +656,31 @@
 
     function updateMap() {
       const countryTotals = new Map();
-      for (const row of filtered(state.providerCountry)) {
+      for (const row of filteredBase()) {
         const key = row.country || "ZZ";
-        countryTotals.set(key, (countryTotals.get(key) || 0) + intValue(row, state.metric));
+        if (state.metric === "asn_count") {
+          if (!countryTotals.has(key)) {
+            countryTotals.set(key, new Set());
+          }
+          if (row.asn && row.asn !== "0") {
+            countryTotals.get(key).add(row.asn);
+          }
+        } else {
+          countryTotals.set(key, (countryTotals.get(key) || 0) + intValue(row, state.metric));
+        }
       }
       const codes = Array.from(countryTotals.keys()).filter((code) => /^[A-Z]{2}$/.test(code));
       const locations = codes.map((code) => regionNames.of(code));
-      const values = codes.map((code) => countryTotals.get(code));
+      const values = codes.map((code) => {
+        const value = countryTotals.get(code);
+        return value instanceof Set ? value.size : value;
+      });
       Plotly.react("map", [{
         type: "choropleth",
         locationmode: "country names",
         locations,
         z: values,
-        text: codes.map((code, index) => `${code} - ${locations[index]}: ${formatNumber(countryTotals.get(code))}`),
+        text: codes.map((code, index) => `${code} - ${locations[index]}: ${formatNumber(values[index])}`),
         colorscale: [
           [0, "#eaf1fb"],
           [0.35, "#94b8e8"],
@@ -598,20 +708,21 @@
     }
 
     function renderRows() {
-      const asnRows = filtered(state.providerAsn)
+      const rows = filteredBase();
+      const asnRows = aggregateBy(["provider", "asn"], rows)
         .sort((a, b) => intValue(b, "ip_count") - intValue(a, "ip_count"))
         .slice(0, 60);
       document.getElementById("asnRows").innerHTML = asnRows.map((row) => `
         <tr>
           <td>${row.provider}</td>
-          <td><b>AS${row.asn}</b><br>${row.asn_org || "Unknown"}</td>
+          <td><b>${row.asn === "0" ? "Unknown ASN" : `AS${row.asn}`}</b><br>${row.asn_org || "Unknown"}</td>
           <td>${formatNumber(intValue(row, "ip_count"))}</td>
           <td>${formatNumber(intValue(row, "prefix_count"))}</td>
           <td>${(row.countries || "").split(/\s+/).filter(Boolean).map(countryName).join(", ") || "-"}</td>
         </tr>
       `).join("");
 
-      const countryRows = filtered(state.providerCountry)
+      const countryRows = aggregateBy(["provider", "country"], rows)
         .sort((a, b) => intValue(b, "ip_count") - intValue(a, "ip_count"))
         .slice(0, 60);
       document.getElementById("countryRows").innerHTML = countryRows.map((row) => `
@@ -632,18 +743,20 @@
     }
 
     async function init() {
-      const [providerCountryText, providerAsnText, metadata] = await Promise.all([
+      const [providerCountryAsnText, providerCountryText, providerAsnText, metadata] = await Promise.all([
+        fetch(files.providerCountryAsn).then((response) => response.text()),
         fetch(files.providerCountry).then((response) => response.text()),
         fetch(files.providerAsn).then((response) => response.text()),
         fetch(files.metadata).then((response) => response.json())
       ]);
+      state.providerCountryAsn = parseCsv(providerCountryAsnText);
       state.providerCountry = parseCsv(providerCountryText);
       state.providerAsn = parseCsv(providerAsnText);
       state.metadata = metadata;
-      setProviders();
-      setCountries();
+      syncFilterOptions();
       document.getElementById("provider").addEventListener("change", (event) => {
         state.provider = event.target.value;
+        syncFilterOptions();
         update();
       });
       document.getElementById("metric").addEventListener("change", (event) => {
@@ -652,14 +765,22 @@
       });
       document.getElementById("country").addEventListener("change", (event) => {
         state.country = event.target.value;
+        syncFilterOptions();
+        update();
+      });
+      document.getElementById("asn").addEventListener("change", (event) => {
+        state.asn = event.target.value;
+        syncFilterOptions();
         update();
       });
       document.getElementById("minIps").addEventListener("change", (event) => {
         state.minIps = Number.parseInt(event.target.value, 10) || 0;
+        syncFilterOptions();
         update();
       });
       document.getElementById("search").addEventListener("input", (event) => {
         state.search = event.target.value;
+        syncFilterOptions();
         renderRows();
         updateStats();
       });
