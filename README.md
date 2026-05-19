@@ -1,4 +1,8 @@
 # VPN Infrastructure Atlas
+[Open Interactive Atlas](https://ipanalytics.github.io/VPN-Infrastructure-Atlas/)
+## Open Interactive Map
+
+https://ipanalytics.github.io/VPN-Infrastructure-Atlas/
 
 Static public dashboard and aggregate CSV dataset for exploring VPN provider infrastructure footprint by reported endpoint country and ASN/network operator.
 
