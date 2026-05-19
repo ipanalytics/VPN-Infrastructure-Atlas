@@ -1,0 +1,1263 @@
+provider,country,ip_count,prefix_count,asn_count,hosting_ip_count,exit_node_count,avg_confidence
+NordVPN,GB,4879,468,9,4879,4879,95.0
+WLVPN,US,2417,115,11,2417,2417,95.0
+IPVanish,US,2401,114,11,2401,2401,95.0
+NordVPN,PA,1879,140,3,1879,1879,95.0
+Astrill,US,1368,256,63,1368,1368,78.1
+NordVPN,RO,1167,227,1,1167,1167,95.0
+CyberGhost,GB,1102,73,4,1102,1102,71.8
+NordVPN,AU,1069,61,3,1069,1069,95.0
+Astrill,GB,846,31,8,846,846,78.6
+CyberGhost,RO,821,63,3,821,821,72.8
+WLVPN,GB,738,29,6,738,738,95.0
+IPVanish,GB,737,29,6,737,737,95.0
+ProtonVPN,GB,549,172,5,549,549,95.0
+StrongVPN,US,466,129,10,466,466,82.5
+Sentinel dVPN,US,419,278,45,419,419,95.0
+Windscribe,GB,350,80,6,350,350,95.0
+AirVPN,NL,332,15,3,332,332,95.0
+AirVPN,RO,300,44,1,300,300,95.0
+CyberGhost,AU,274,21,2,274,274,72.4
+WiTopia,US,253,45,21,253,253,95.0
+ProtonVPN,RO,251,127,1,251,251,95.0
+Njalla,RO,241,16,1,241,241,80.0
+TunnelBear,US,229,116,7,229,229,95.0
+Windscribe,US,196,47,15,196,196,95.0
+Windscribe,RO,195,40,1,195,195,95.0
+CyberGhost,US,183,23,4,183,183,71.5
+AirVPN,US,176,20,3,176,176,95.0
+VPN Unlimited,US,174,114,16,174,174,70.0
+NordVPN,US,170,22,6,170,170,95.0
+Privado,NL,161,22,3,161,161,95.0
+Mullvad,US,152,75,8,152,152,95.0
+PureVPN,GB,143,64,5,143,143,88.0
+Private Internet Access,US,140,66,9,140,140,95.0
+TunnelBear,RO,137,22,1,137,137,95.0
+Mullvad,GB,135,51,4,135,135,95.0
+Sentinel dVPN,GB,132,81,20,132,132,95.0
+Sentinel dVPN,DE,129,119,15,129,129,95.0
+AirVPN,CA,128,8,2,128,128,95.0
+CyberGhost,SE,125,8,1,125,125,72.0
+WiTopia,RO,125,23,1,125,125,95.0
+ExpressVPN,CY,104,29,1,104,104,70.0
+Astrill,FR,101,18,3,101,101,78.0
+ExpressVPN,GB,101,37,7,101,101,69.6
+Mullvad,RO,93,50,1,93,93,95.0
+PureVPN,RO,93,42,1,93,93,88.0
+Mullvad,SE,88,20,1,88,88,95.0
+ExpressVPN,AU,87,35,1,87,87,69.7
+NordVPN,IN,84,10,3,84,84,95.0
+Private Internet Access,RO,80,29,1,80,80,95.0
+Giganews,US,73,62,2,73,73,78.0
+VyprVPN,US,73,62,2,73,73,95.0
+NordVPN,BR,70,8,1,70,70,95.0
+OVPN,SE,70,8,3,70,70,95.0
+Private Internet Access,GB,68,27,3,68,68,95.0
+Private Internet Access,AU,66,23,3,66,66,95.0
+Sentinel dVPN,TR,60,16,8,60,60,95.0
+WorldVPN,DE,58,46,1,58,58,88.0
+NordVPN,NL,57,5,2,57,57,95.0
+PureVPN,AU,54,20,3,54,54,88.0
+Anonine,RO,51,9,1,51,51,95.0
+Astrill,CA,51,15,5,51,51,78.1
+BoxPN,RO,51,9,1,51,51,95.0
+EasyHideIP,RO,51,9,1,51,51,95.0
+FrootVPN,RO,51,9,1,51,51,95.0
+WiTopia,FR,50,8,2,50,50,95.0
+FlowVPN,US,49,40,24,49,49,70.0
+ProtonVPN,NL,48,32,5,48,48,95.0
+VPN Jantit,US,48,44,16,48,48,88.0
+BoxPN,US,47,8,3,47,47,95.0
+PureVPN,MY,47,17,1,47,47,88.0
+Surfshark,US,47,39,11,47,47,95.0
+Anonine,US,46,8,3,46,46,95.0
+CyberGhost,NL,46,2,1,46,46,71.1
+EasyHideIP,US,46,8,3,46,46,95.0
+FrootVPN,US,46,8,3,46,46,95.0
+VPN Unlimited,NL,46,22,2,46,46,70.0
+Windscribe,AU,45,14,2,45,45,95.0
+IPVanish,NL,44,2,2,44,44,95.0
+TunnelBear,SG,44,33,1,44,44,95.0
+WLVPN,NL,44,2,2,44,44,95.0
+GhostPath,US,43,41,21,43,43,88.0
+Astrill,DE,42,21,7,42,42,78.0
+VPN Unlimited,CA,41,18,3,41,41,70.0
+IVPN,GB,40,31,3,40,40,95.0
+ProtonVPN,CH,40,11,3,40,40,95.0
+Trust.Zone,RO,40,33,1,40,40,70.0
+VPN Gate,JP,40,40,13,40,40,78.0
+VPNUK,GB,40,29,5,40,40,86.9
+WiTopia,GB,40,3,2,40,40,95.0
+Mullvad,IN,39,19,3,39,39,95.0
+Sentinel dVPN,RO,39,29,6,39,39,95.0
+CyberGhost,LT,38,2,1,38,38,73.3
+Goosevpn,RO,38,31,1,38,38,78.0
+IPVanish,AU,38,7,1,38,38,95.0
+IPVanish,RO,38,6,1,38,38,95.0
+Opera VPN,SE,38,3,1,38,38,70.0
+WLVPN,AU,38,7,1,38,38,95.0
+WLVPN,RO,38,6,1,38,38,95.0
+AirVPN,SE,36,1,1,36,36,95.0
+Sentinel dVPN,CA,36,20,8,36,36,95.0
+IPVanish,CA,35,1,1,35,35,95.0
+WLVPN,CA,35,1,1,35,35,95.0
+WorldVPN,US,35,14,3,35,35,88.0
+FlowVPN,CA,34,20,4,34,34,70.0
+FastestVPN,RO,33,29,1,33,33,95.0
+SwitchVPN,US,33,23,5,33,33,88.0
+Astrill,TW,32,14,2,32,32,78.0
+IVPN,RO,32,22,1,32,32,95.0
+StrongVPN,GB,32,10,4,32,32,83.8
+Astrill,LT,31,11,4,31,31,78.0
+VPN.ac,US,31,16,8,31,31,95.0
+VPNSecure,FR,31,21,2,31,31,88.0
+ExpressVPN,US,30,12,4,30,30,70.0
+Sentinel dVPN,SG,30,21,7,30,30,95.0
+Vpnht,DE,30,3,2,30,30,78.0
+WiTopia,CA,30,5,2,30,30,95.0
+Windscribe,EE,30,7,1,30,30,95.0
+ExpressVPN,BR,29,5,1,29,29,70.0
+PureVPN,US,29,16,6,29,29,88.0
+ProtonVPN,AU,28,13,2,28,28,95.0
+VPN Gate,KR,28,28,9,28,28,78.0
+Astrill,NL,27,8,5,27,27,78.0
+Astrill,RO,27,10,1,27,27,78.0
+EasyHideIP,GB,27,4,2,27,27,95.0
+Astrill,IN,26,12,4,26,26,78.0
+CyberGhost,EE,26,2,1,26,26,71.9
+PrivateVPN,SE,26,7,5,26,26,95.0
+Sentinel dVPN,HK,26,25,9,26,26,95.0
+VPN Jantit,GB,26,23,6,26,26,88.0
+VPN Unlimited,FR,26,19,2,26,26,70.0
+Mullvad,VU,25,7,2,25,25,95.0
+Sentinel dVPN,IT,24,16,5,24,24,95.0
+WiTopia,TR,24,2,1,24,24,95.0
+PrivateVPN,US,23,18,7,23,23,93.8
+VPN Jantit,CN,23,22,2,23,23,88.0
+FrootVPN,CA,22,4,4,22,22,95.0
+Vpnht,FR,22,5,2,22,22,78.0
+Windscribe,CA,22,5,2,22,22,95.0
+Anonine,CA,21,4,4,21,21,95.0
+Anonine,GB,21,3,3,21,21,95.0
+AzireVPN,GB,21,20,2,21,21,95.0
+BoxPN,CA,21,4,4,21,21,95.0
+EasyHideIP,CA,21,4,4,21,21,95.0
+IVPN,US,21,18,7,21,21,95.0
+VPN.ac,NL,21,13,3,21,21,95.0
+Windscribe,AR,21,7,1,21,21,95.0
+BoxPN,GB,20,3,3,20,20,95.0
+FlowVPN,GB,20,17,12,20,20,70.0
+Mullvad,AU,20,7,1,20,20,95.0
+Sentinel dVPN,FR,20,20,6,20,20,95.0
+TunnelBear,NZ,20,1,1,20,20,95.0
+VPN.ac,RO,20,17,1,20,20,95.0
+CyberGhost,MD,19,3,1,19,19,72.6
+Sentinel dVPN,CN,19,19,3,19,19,95.0
+SSHMax,CZ,18,2,1,18,18,70.0
+VPN Jantit,RU,18,16,2,18,18,88.0
+Vpnht,GB,18,8,2,18,18,78.0
+WLVPN,EE,18,3,1,18,18,95.0
+IPVanish,EE,17,3,1,17,17,95.0
+IPVanish,IN,17,3,2,17,17,95.0
+NordVPN,SE,17,1,1,17,17,95.0
+VPN Gate,US,17,2,2,17,17,78.0
+VPN Jantit,FR,17,16,2,17,17,88.0
+WLVPN,IN,17,3,2,17,17,95.0
+AirVPN,LV,16,4,1,16,16,95.0
+Anonine,AU,16,2,1,16,16,95.0
+BoxPN,AU,16,2,1,16,16,95.0
+EasyHideIP,AU,16,2,1,16,16,95.0
+FrootVPN,AU,16,2,1,16,16,95.0
+Perimeter81,US,16,4,1,16,16,70.0
+Private Internet Access,UK,16,5,3,16,16,95.0
+Smartdnsproxy,RO,16,15,1,16,16,78.0
+Trust.Zone,GB,16,15,3,16,16,70.0
+TunnelBear,HK,16,3,1,16,16,95.0
+CyberGhost,AL,15,2,1,15,15,75.0
+FrootVPN,GB,15,2,2,15,15,95.0
+OVPN,RO,15,14,1,15,15,95.0
+Private Internet Access,CA,15,11,4,15,15,95.0
+ProtonVPN,US,15,9,6,15,15,95.0
+Safervpn,US,15,14,5,15,15,78.0
+VPNUK,CA,15,15,1,15,15,95.0
+Windscribe,ID,15,3,1,15,15,95.0
+Anonine,LU,14,1,1,14,14,95.0
+Astrill,JP,14,2,1,14,14,78.0
+AzireVPN,US,14,14,5,14,14,95.0
+BoxPN,LU,14,1,1,14,14,95.0
+EasyHideIP,LU,14,1,1,14,14,95.0
+FrootVPN,LU,14,1,1,14,14,95.0
+Hotspotshield,RO,14,14,1,14,14,78.0
+IPVanish,FI,14,1,1,14,14,95.0
+Ivacy,US,14,14,7,14,14,95.0
+WLVPN,FI,14,1,1,14,14,95.0
+Zoogvpn,CA,14,14,3,14,14,78.0
+Anonine,SE,13,3,1,13,13,95.0
+AnonymousVPN,NL,13,12,1,13,13,95.0
+Astrill,HK,13,5,4,13,13,78.0
+CyberGhost,DE,13,6,1,13,13,71.9
+EasyHideIP,FR,13,3,2,13,13,95.0
+FlowVPN,SG,13,5,4,13,13,70.0
+FrootVPN,FR,13,3,2,13,13,95.0
+KevinVPN,US,13,11,8,13,13,70.0
+Kompot VPN,PA,13,2,1,13,13,70.0
+NetShade,FR,13,13,1,13,13,95.0
+ProtonVPN,EE,13,11,1,13,13,95.0
+RedShield VPN,US,13,5,3,13,13,95.0
+Riseup VPN,FR,13,11,1,13,13,95.0
+Sentinel dVPN,VN,13,4,3,13,13,95.0
+Smartdnsproxy,US,13,13,7,13,13,78.0
+VPN.ac,FR,13,6,2,13,13,95.0
+AirVPN,NZ,12,2,1,12,12,95.0
+Anonine,FR,12,3,2,12,12,95.0
+BoxPN,FR,12,3,2,12,12,95.0
+FastestVPN,US,12,10,5,12,12,95.0
+GhostPath,GB,12,11,7,12,12,88.0
+Mullvad,NO,12,3,1,12,12,95.0
+Private Internet Access,SE,12,3,2,12,12,95.0
+PrivateVPN,IN,12,10,2,12,12,88.0
+RedShield VPN,GB,12,12,1,12,12,95.0
+Windscribe,CY,12,3,2,12,12,95.0
+Windscribe,TH,12,4,3,12,12,95.0
+WorldVPN,NL,12,8,4,12,12,88.0
+Zoogvpn,US,12,10,6,12,12,78.0
+Anonine,DE,11,6,1,11,11,95.0
+AzireVPN,SE,11,7,2,11,11,95.0
+BoxPN,DE,11,6,1,11,11,95.0
+CyberGhost,KE,11,1,1,11,11,72.3
+EasyHideIP,DE,11,6,1,11,11,95.0
+ExpressVPN,RO,11,6,1,11,11,70.0
+FastestVPN,CA,11,4,1,11,11,95.0
+FrootVPN,DE,11,6,1,11,11,95.0
+HideIPVPN,FR,11,11,1,11,11,70.0
+IPVanish,MY,11,1,1,11,11,95.0
+Ivacy,AU,11,6,3,11,11,95.0
+Proxpn,US,11,10,2,11,11,78.0
+Sentinel dVPN,AU,11,10,6,11,11,95.0
+WLVPN,MY,11,1,1,11,11,95.0
+uVPN,US,11,11,2,11,11,70.0
+Anonine,IL,10,1,1,10,10,95.0
+Anonine,NL,10,3,1,10,10,95.0
+AnonymousVPN,CA,10,9,2,10,10,95.0
+Astrill,KR,10,3,2,10,10,78.0
+BoxPN,IL,10,1,1,10,10,95.0
+BoxPN,NL,10,3,1,10,10,95.0
+CyberGhost,MK,10,1,1,10,10,72.5
+EasyHideIP,IL,10,1,1,10,10,95.0
+EasyHideIP,NL,10,3,1,10,10,95.0
+FreeVPN,US,10,10,3,10,10,88.0
+Froot,SE,10,1,1,10,10,78.0
+FrootVPN,IL,10,1,1,10,10,95.0
+FrootVPN,NL,10,3,1,10,10,95.0
+FrootVPN,SE,10,1,1,10,10,95.0
+IPVanish,CR,10,1,1,10,10,95.0
+IPVanish,JP,10,1,1,10,10,95.0
+IPVanish,MD,10,1,1,10,10,95.0
+KeyDrop,RU,10,10,6,10,10,70.0
+Private Internet Access,DE,10,4,2,10,10,95.0
+Sentinel dVPN,EE,10,7,3,10,10,95.0
+StrongVPN,CA,10,3,1,10,10,86.0
+Surfshark,AU,10,9,3,10,10,95.0
+SwitchVPN,HK,10,1,1,10,10,88.0
+VPN Unlimited,SI,10,4,2,10,10,70.0
+VPN.ac,AU,10,3,1,10,10,95.0
+VPN.ac,CA,10,4,3,10,10,95.0
+VPNObratno,RU,10,10,5,10,10,88.0
+VPNSecure,CA,10,10,1,10,10,88.0
+Vpnht,RO,10,1,0,10,10,78.0
+WLVPN,CR,10,1,1,10,10,95.0
+WLVPN,JP,10,1,1,10,10,95.0
+WLVPN,MD,10,1,1,10,10,95.0
+WiTopia,IN,10,2,2,10,10,95.0
+Windscribe,BR,10,3,2,10,10,95.0
+Anonine,ES,9,1,1,9,9,95.0
+Anonine,PL,9,2,1,9,9,95.0
+Astrill,MY,9,2,2,9,9,78.0
+BoxPN,ES,9,1,1,9,9,95.0
+BoxPN,PL,9,2,1,9,9,95.0
+EasyHideIP,ES,9,1,1,9,9,95.0
+EasyHideIP,PL,9,2,1,9,9,95.0
+FlowVPN,FR,9,8,4,9,9,70.0
+FlowVPN,NL,9,9,1,9,9,70.0
+FrootVPN,ES,9,1,1,9,9,95.0
+FrootVPN,PL,9,2,1,9,9,95.0
+Hotspotshield,GB,9,9,3,9,9,78.0
+Hotspotshield,US,9,9,3,9,9,78.0
+Kompot VPN,RU,9,6,4,9,9,71.1
+OVPN,GB,9,8,1,9,9,95.0
+OysterVPN,US,9,7,3,9,9,95.0
+Privado,IN,9,2,1,9,9,95.0
+Private Internet Access,CY,9,2,1,9,9,95.0
+PrivateVPN,GB,9,3,3,9,9,95.0
+Sentinel dVPN,NL,9,9,7,9,9,95.0
+SwitchVPN,PA,9,2,1,9,9,88.0
+VPN.ac,DE,9,2,2,9,9,95.0
+VPN.ac,GB,9,5,4,9,9,95.0
+Vpnht,RU,9,1,0,9,9,78.0
+WiTopia,AU,9,2,1,9,9,95.0
+Windscribe,AL,9,2,2,9,9,95.0
+Windscribe,AQ,9,2,1,9,9,95.0
+Windscribe,PA,9,2,1,9,9,95.0
+Windscribe,VN,9,2,2,9,9,95.0
+Windscribe,ZA,9,4,1,9,9,95.0
+Anonine,IT,8,1,1,8,8,95.0
+Astrill,FI,8,3,2,8,8,78.0
+Astrill,HU,8,4,2,8,8,78.0
+BoxPN,IT,8,1,1,8,8,95.0
+CactusVPN,US,8,7,7,8,8,95.0
+EasyHideIP,IT,8,1,1,8,8,95.0
+ExpressVPN,EE,8,3,1,8,8,70.0
+ExpressVPN,SE,8,3,1,8,8,70.0
+FlowVPN,VN,8,3,1,8,8,70.0
+FrootVPN,IT,8,1,1,8,8,95.0
+Goosevpn,US,8,8,2,8,8,78.0
+HideIPVPN,GB,8,8,3,8,8,70.0
+Kompot VPN,EE,8,2,1,8,8,80.0
+Kompot VPN,US,8,7,1,8,8,80.0
+Le VPN,RO,8,8,1,8,8,70.0
+Private Internet Access,DK,8,2,1,8,8,95.0
+Private Internet Access,IT,8,2,2,8,8,95.0
+PureVPN,LT,8,2,1,8,8,88.0
+PureVPN,LU,8,3,1,8,8,88.0
+Sentinel dVPN,IN,8,5,3,8,8,95.0
+StrongVPN,IN,8,4,1,8,8,83.8
+StrongVPN,RO,8,3,1,8,8,83.8
+Surfshark,UK,8,6,4,8,8,95.0
+SwitchVPN,GB,8,7,3,8,8,88.0
+VPN Jantit,HK,8,7,1,8,8,88.0
+VPN Unlimited,RO,8,4,1,8,8,70.0
+VPN.ac,IS,8,2,1,8,8,95.0
+VPNSecure,GB,8,7,5,8,8,88.0
+VPNUK,NL,8,8,1,8,8,91.9
+VPNUK,US,8,8,4,8,8,88.8
+Zoogvpn,FR,8,8,2,8,8,78.0
+Zoogvpn,NL,8,8,4,8,8,78.0
+Anonine,UA,7,1,1,7,7,95.0
+Astrill,SG,7,3,2,7,7,78.3
+BTGuard,NL,7,2,1,7,7,70.0
+BoxPN,UA,7,1,1,7,7,95.0
+EasyHideIP,UA,7,1,1,7,7,95.0
+FlowVPN,CH,7,5,3,7,7,70.0
+FlowVPN,HU,7,3,1,7,7,70.0
+FlowVPN,KR,7,6,3,7,7,70.0
+FrootVPN,UA,7,1,1,7,7,95.0
+Getflix,US,7,7,5,7,7,78.0
+IPVanish,AL,7,1,1,7,7,95.0
+IVPN,NL,7,4,1,7,7,95.0
+Kompot VPN,GB,7,5,2,7,7,80.0
+MoriVPN,US,7,7,3,7,7,80.0
+NordVPN,AL,7,1,1,7,7,95.0
+PhantomPeer,US,7,7,1,7,7,88.0
+Private Internet Access,ES,7,2,2,7,7,95.0
+Sentinel dVPN,GE,7,6,3,7,7,95.0
+SlickVPN,US,7,7,7,7,7,88.0
+Trust.Zone,CA,7,6,3,7,7,70.0
+VPN Jantit,ID,7,5,3,7,7,88.0
+WLVPN,AL,7,1,1,7,7,95.0
+WorldVPN,FR,7,7,1,7,7,88.0
+WorldVPN,HK,7,3,1,7,7,88.0
+Zoogvpn,HK,7,7,2,7,7,78.0
+uVPN,FR,7,7,1,7,7,70.0
+Anonine,TR,6,2,1,6,6,95.0
+Astrill,BG,6,2,2,6,6,78.0
+Astrill,IL,6,2,2,6,6,78.0
+BoxPN,TR,6,2,1,6,6,95.0
+CactusVPN,NL,6,5,5,6,6,95.0
+EasyHideIP,TR,6,2,1,6,6,95.0
+FlowVPN,IT,6,6,4,6,6,70.0
+FrootVPN,TR,6,2,1,6,6,95.0
+GhostPath,AU,6,6,3,6,6,88.0
+GhostPath,CA,6,6,3,6,6,88.0
+Kompot VPN,NL,6,5,2,6,6,80.0
+Private Internet Access,EE,6,3,1,6,6,95.0
+Private Internet Access,FI,6,2,1,6,6,95.0
+Private Internet Access,JP,6,3,1,6,6,95.0
+Private Internet Access,NL,6,3,2,6,6,95.0
+PrivateVPN,CA,6,4,3,6,6,95.0
+PrivateVPN,IT,6,1,1,6,6,95.0
+PureVPN,EU,6,1,1,6,6,88.0
+PureVPN,SC,6,4,1,6,6,88.0
+Sentinel dVPN,EG,6,2,1,6,6,95.0
+Sentinel dVPN,MD,6,3,2,6,6,95.0
+Sentinel dVPN,UA,6,4,4,6,6,95.0
+Surfshark,CA,6,6,3,6,6,95.0
+Surfshark,ES,6,4,2,6,6,95.0
+Surfshark,FR,6,4,4,6,6,95.0
+Trust.Zone,BG,6,6,3,6,6,70.0
+VPN Jantit,PH,6,5,2,6,6,88.0
+VPN Jantit,SG,6,3,2,6,6,88.0
+VPN Unlimited,DE,6,3,2,6,6,70.0
+VPN Unlimited,GB,6,6,2,6,6,70.0
+Windscribe,IL,6,2,1,6,6,95.0
+Windscribe,IN,6,1,1,6,6,95.0
+Windscribe,KR,6,2,2,6,6,95.0
+Windscribe,LT,6,2,1,6,6,95.0
+Windscribe,LV,6,2,1,6,6,95.0
+Windscribe,MD,6,3,1,6,6,95.0
+Windscribe,NL,6,2,1,6,6,95.0
+Windscribe,TW,6,2,1,6,6,95.0
+WorldVPN,PL,6,3,1,6,6,88.0
+Zoogvpn,RO,6,6,1,6,6,78.0
+Anonine,BR,5,1,1,5,5,95.0
+Anonine,CR,5,1,1,5,5,95.0
+Anonine,FI,5,2,1,5,5,95.0
+Anonine,HK,5,1,1,5,5,95.0
+Anonine,KR,5,1,1,5,5,95.0
+Anonine,MY,5,1,1,5,5,95.0
+Anonine,NO,5,1,1,5,5,95.0
+Anonine,PA,5,1,1,5,5,95.0
+AnonymousVPN,US,5,5,4,5,5,95.0
+Astrill,AR,5,1,1,5,5,78.0
+Astrill,GR,5,2,2,5,5,78.0
+Astrill,NO,5,3,1,5,5,78.0
+BoxPN,BR,5,1,1,5,5,95.0
+BoxPN,CR,5,1,1,5,5,95.0
+BoxPN,FI,5,2,1,5,5,95.0
+BoxPN,HK,5,1,1,5,5,95.0
+BoxPN,KR,5,1,1,5,5,95.0
+BoxPN,MY,5,1,1,5,5,95.0
+BoxPN,NO,5,1,1,5,5,95.0
+BoxPN,PA,5,1,1,5,5,95.0
+EasyHideIP,BR,5,1,1,5,5,95.0
+EasyHideIP,CR,5,1,1,5,5,95.0
+EasyHideIP,FI,5,2,1,5,5,95.0
+EasyHideIP,HK,5,1,1,5,5,95.0
+EasyHideIP,KR,5,1,1,5,5,95.0
+EasyHideIP,MY,5,1,1,5,5,95.0
+EasyHideIP,NO,5,1,1,5,5,95.0
+EasyHideIP,PA,5,1,1,5,5,95.0
+FastestVPN,GB,5,3,2,5,5,95.0
+FlowVPN,HK,5,5,3,5,5,70.0
+FlowVPN,RO,5,4,1,5,5,70.0
+Freedomip,FR,5,1,1,5,5,78.0
+FrootVPN,BR,5,1,1,5,5,95.0
+FrootVPN,CR,5,1,1,5,5,95.0
+FrootVPN,FI,5,2,1,5,5,95.0
+FrootVPN,HK,5,1,1,5,5,95.0
+FrootVPN,KR,5,1,1,5,5,95.0
+FrootVPN,MY,5,1,1,5,5,95.0
+FrootVPN,NO,5,1,1,5,5,95.0
+FrootVPN,PA,5,1,1,5,5,95.0
+GhostPath,NL,5,4,4,5,5,88.0
+HideIPVPN,US,5,5,4,5,5,70.0
+IVPN,CA,5,3,2,5,5,95.0
+KevinVPN,GB,5,4,2,5,5,70.0
+Kompot VPN,KZ,5,4,1,5,5,70.0
+Kompot VPN,PL,5,2,1,5,5,80.0
+Le VPN,LU,5,5,1,5,5,70.0
+NordVPN,FR,5,5,1,5,5,95.0
+PrivateVPN,DE,5,3,2,5,5,92.2
+PureVPN,CA,5,2,1,5,5,88.0
+Safervpn,AT,5,5,1,5,5,78.0
+Sentinel dVPN,AE,5,4,3,5,5,95.0
+Sentinel dVPN,PE,5,2,1,5,5,95.0
+Sentinel dVPN,PL,5,5,2,5,5,95.0
+Smartdnsproxy,NL,5,3,2,5,5,78.0
+SwitchVPN,IT,5,1,1,5,5,88.0
+SwitchVPN,NL,5,2,1,5,5,88.0
+Trust.Zone,DE,5,2,1,5,5,70.0
+TunnelBear,GB,5,2,1,5,5,95.0
+VPN Jantit,NL,5,5,1,5,5,88.0
+VPN.ac,SC,5,2,1,5,5,95.0
+Vpnfacile,FR,5,3,1,5,5,78.0
+Vpnht,AT,5,1,1,5,5,78.0
+WiTopia,BR,5,1,1,5,5,95.0
+WiTopia,KR,5,1,1,5,5,95.0
+WiTopia,LT,5,1,1,5,5,95.0
+WiTopia,LV,5,1,1,5,5,95.0
+WiTopia,MY,5,1,1,5,5,95.0
+WiTopia,NL,5,1,1,5,5,95.0
+WiTopia,PT,5,1,1,5,5,95.0
+WiTopia,TH,5,1,1,5,5,95.0
+WorldVPN,BG,5,3,1,5,5,88.0
+WorldVPN,IT,5,3,1,5,5,88.0
+WorldVPN,LV,5,3,1,5,5,88.0
+WorldVPN,UA,5,3,1,5,5,88.0
+AirVPN,AU,4,1,1,4,4,95.0
+AirVPN,EE,4,1,1,4,4,95.0
+AirVPN,MY,4,1,1,4,4,95.0
+Anonvpn,MU,4,4,0,4,4,78.0
+Astrill,AT,4,1,1,4,4,78.5
+Astrill,IT,4,1,1,4,4,78.0
+Astrill,LU,4,2,1,4,4,78.0
+Astrill,MD,4,2,1,4,4,78.0
+Astrill,NZ,4,1,1,4,4,78.0
+Astrill,RU,4,1,1,4,4,78.0
+Astrill,SE,4,2,2,4,4,78.0
+AzireVPN,NL,4,4,1,4,4,95.0
+CCrypto VPN,FR,4,4,1,4,4,88.0
+CactusVPN,CA,4,2,1,4,4,95.0
+CactusVPN,UK,4,2,1,4,4,95.0
+ExpressVPN,DE,4,2,1,4,4,70.0
+FlowVPN,AR,4,4,2,4,4,70.0
+FlowVPN,AT,4,4,3,4,4,70.0
+FlowVPN,CZ,4,4,1,4,4,70.0
+FlowVPN,RU,4,2,1,4,4,70.0
+Froot,CA,4,4,4,4,4,78.0
+Froot,US,4,3,2,4,4,78.0
+GhostPath,DE,4,4,3,4,4,88.0
+KevinVPN,NL,4,3,3,4,4,70.0
+Le VPN,AT,4,4,1,4,4,70.0
+LimeVPN,US,4,4,4,4,4,70.0
+Mullvad,CA,4,2,1,4,4,95.0
+NordVPN,CA,4,1,1,4,4,95.0
+NordVPN,DE,4,1,1,4,4,95.0
+PrivateVPN,AU,4,4,2,4,4,91.5
+PrivateVPN,FR,4,1,1,4,4,95.0
+PrivateVPN,NL,4,1,1,4,4,95.0
+PrivateVPN,PL,4,3,1,4,4,95.0
+PureVPN,AL,4,2,1,4,4,88.0
+PureVPN,IN,4,1,1,4,4,88.0
+PureVPN,MD,4,2,1,4,4,88.0
+PureVPN,NL,4,3,1,4,4,88.0
+RedShield VPN,RO,4,4,1,4,4,95.0
+Riseup VPN,US,4,4,2,4,4,95.0
+Sentinel dVPN,AR,4,3,2,4,4,95.0
+Sentinel dVPN,RU,4,4,1,4,4,95.0
+Sentinel dVPN,TW,4,4,1,4,4,95.0
+Sentinel dVPN,UY,4,1,1,4,4,95.0
+Smartdnsproxy,GB,4,4,3,4,4,78.0
+StrongVPN,EE,4,1,1,4,4,83.8
+Surfshark,BE,4,3,2,4,4,95.0
+Surfshark,DE,4,3,3,4,4,95.0
+Surfshark,IN,4,2,1,4,4,95.0
+Surfshark,IT,4,2,2,4,4,95.0
+Surfshark,PL,4,4,2,4,4,95.0
+Surfshark,PT,4,3,3,4,4,95.0
+VPN Jantit,DE,4,4,1,4,4,88.0
+VPN Jantit,TH,4,4,2,4,4,88.0
+VPN Unlimited,IT,4,3,1,4,4,70.0
+VPN.ac,SG,4,1,1,4,4,95.0
+VPNSTunnel,US,4,4,1,4,4,88.0
+WiTopia,FI,4,1,1,4,4,95.0
+WiTopia,HK,4,1,0,4,4,95.0
+WiTopia,IL,4,1,1,4,4,95.0
+WiTopia,IS,4,1,1,4,4,95.0
+WiTopia,IT,4,1,1,4,4,95.0
+WiTopia,PA,4,1,1,4,4,95.0
+WiTopia,RU,4,1,1,4,4,95.0
+WiTopia,VN,4,1,1,4,4,95.0
+Windscribe,BA,4,3,1,4,4,95.0
+WorldVPN,AU,4,2,1,4,4,88.0
+WorldVPN,FI,4,3,1,4,4,88.0
+AnonymousVPN,UA,3,2,2,3,3,95.0
+Astrill,BA,3,2,1,3,3,78.0
+Astrill,BR,3,1,1,3,3,78.7
+Astrill,DK,3,3,1,3,3,78.0
+Astrill,EE,3,1,1,3,3,78.0
+Astrill,IE,3,1,1,3,3,78.7
+Astrill,PA,3,3,1,3,3,78.0
+Astrill,PK,3,1,1,3,3,78.0
+Astrill,PT,3,1,1,3,3,78.0
+Astrill,SK,3,1,1,3,3,78.0
+Astrill,UA,3,1,1,3,3,78.0
+Astrill,VN,3,1,1,3,3,78.0
+Astrill,ZA,3,2,1,3,3,78.0
+AzireVPN,NO,3,3,2,3,3,95.0
+AzireVPN,VU,3,3,2,3,3,95.0
+ExpressVPN,AL,3,3,1,3,3,70.0
+ExpressVPN,LT,3,2,1,3,3,70.0
+FlowVPN,DE,3,3,3,3,3,70.0
+FlowVPN,GE,3,2,2,3,3,70.0
+FlowVPN,LT,3,3,3,3,3,70.0
+FlowVPN,PH,3,3,1,3,3,70.0
+FlowVPN,UA,3,3,2,3,3,70.0
+FreeVPN,NL,3,2,2,3,3,88.0
+GhostPath,CZ,3,2,2,3,3,88.0
+GhostPath,FR,3,3,3,3,3,88.0
+GhostPath,RU,3,3,2,3,3,88.0
+GhostPath,SE,3,3,1,3,3,88.0
+GhostPath,SG,3,3,1,3,3,88.0
+Goosevpn,NL,3,1,1,3,3,78.0
+HideIPVPN,NL,3,2,1,3,3,70.0
+IVPN,EE,3,3,1,3,3,95.0
+IVPN,MY,3,3,1,3,3,95.0
+IVPN,PA,3,2,1,3,3,95.0
+Ivacy,CA,3,3,1,3,3,95.0
+Ivacy,EE,3,1,1,3,3,95.0
+Ivacy,GB,3,3,2,3,3,95.0
+Ivacy,UK,3,3,2,3,3,95.0
+KeyDrop,AE,3,3,1,3,3,70.0
+Mullvad,FI,3,1,1,3,3,95.0
+Mullvad,HK,3,1,1,3,3,95.0
+NordVPN,MD,3,1,1,3,3,95.0
+OysterVPN,EU,3,3,2,3,3,95.0
+OysterVPN,IN,3,1,1,3,3,95.0
+Private Internet Access,AL,3,1,1,3,3,95.0
+Private Internet Access,LT,3,1,1,3,3,95.0
+ProtonVPN,JP,3,2,2,3,3,95.0
+Proxpn,MU,3,2,0,3,3,78.0
+Safervpn,CA,3,3,1,3,3,78.0
+Sentinel dVPN,CY,3,3,1,3,3,95.0
+Sentinel dVPN,KZ,3,1,1,3,3,95.0
+Sentinel dVPN,MY,3,3,3,3,3,95.0
+Sentinel dVPN,NO,3,2,1,3,3,95.0
+Sentinel dVPN,SE,3,3,3,3,3,95.0
+SmartVPN,CA,3,3,1,3,3,88.0
+SmartVPN,US,3,3,1,3,3,88.0
+StrongVPN,MY,3,1,1,3,3,85.0
+StrongVPN,NL,3,1,1,3,3,85.0
+Trust.Zone,FR,3,3,1,3,3,70.0
+Trust.Zone,US,3,3,3,3,3,70.0
+TunnelBear,NL,3,1,1,3,3,95.0
+VPN Gate,RU,3,3,3,3,3,78.0
+VPN Gate,TH,3,3,2,3,3,78.0
+VPN Jantit,HU,3,3,2,3,3,88.0
+VPN Jantit,LU,3,3,2,3,3,88.0
+VPN.ac,HK,3,2,1,3,3,95.0
+VPNSecure,US,3,3,2,3,3,88.0
+VPNUK,CH,3,3,1,3,3,86.7
+VPNUK,RO,3,3,1,3,3,78.3
+Vpnht,AL,3,1,1,3,3,78.0
+Vpnht,NL,3,3,3,3,3,78.0
+WiTopia,DO,3,1,1,3,3,95.0
+Windscribe,GE,3,1,1,3,3,95.0
+Windscribe,IS,3,1,1,3,3,95.0
+Windscribe,MK,3,1,1,3,3,95.0
+Windscribe,PL,3,1,1,3,3,95.0
+Windscribe,RU,3,1,1,3,3,95.0
+WorkingVPN,FR,3,3,1,3,3,95.0
+WorldVPN,RU,3,1,1,3,3,88.0
+WorldVPN,SG,3,1,1,3,3,88.0
+Zoogvpn,GB,3,3,2,3,3,78.0
+Zoogvpn,UA,3,3,2,3,3,78.0
+uVPN,RO,3,3,1,3,3,70.0
+AnonymousVPN,LU,2,1,1,2,2,95.0
+AnonymousVPN,LV,2,2,2,2,2,95.0
+Astrill,AL,2,1,1,2,2,78.0
+Astrill,CZ,2,1,1,2,2,78.0
+Astrill,ES,2,1,1,2,2,78.0
+Astrill,TH,2,1,1,2,2,78.0
+AzireVPN,CA,2,2,2,2,2,95.0
+CCrypto VPN,LV,2,1,1,2,2,88.0
+CactusVPN,BR,2,2,2,2,2,95.0
+CactusVPN,CH,2,2,2,2,2,95.0
+CactusVPN,DE,2,2,1,2,2,95.0
+CactusVPN,ES,2,2,2,2,2,95.0
+CactusVPN,HK,2,2,2,2,2,95.0
+CactusVPN,IN,2,2,2,2,2,95.0
+CactusVPN,IT,2,2,2,2,2,95.0
+CactusVPN,JP,2,2,2,2,2,95.0
+CactusVPN,LU,2,1,1,2,2,95.0
+CactusVPN,LV,2,2,1,2,2,95.0
+CactusVPN,MD,2,2,2,2,2,95.0
+CactusVPN,PL,2,2,1,2,2,95.0
+CactusVPN,PT,2,2,2,2,2,95.0
+CactusVPN,RO,2,2,1,2,2,95.0
+CactusVPN,RU,2,2,1,2,2,95.0
+CactusVPN,SE,2,2,1,2,2,95.0
+CactusVPN,UA,2,2,2,2,2,95.0
+CyberGhost,IN,2,1,0,2,2,95.0
+ExpressVPN,GE,2,1,1,2,2,70.0
+ExpressVPN,MD,2,1,1,2,2,70.0
+FastestVPN,DE,2,2,1,2,2,95.0
+FlowVPN,JP,2,1,1,2,2,70.0
+FlowVPN,LU,2,1,1,2,2,70.0
+FlowVPN,SE,2,2,2,2,2,70.0
+FlowVPN,TR,2,2,1,2,2,70.0
+FlowVPN,TW,2,2,1,2,2,70.0
+FlowVPN,ZA,2,2,1,2,2,70.0
+FreeVPN,DE,2,2,2,2,2,88.0
+FreeVPN,FR,2,2,1,2,2,88.0
+FreeVPN,ID,2,2,1,2,2,88.0
+Freevpn,FR,2,2,2,2,2,78.0
+Froot,RO,2,2,1,2,2,78.0
+Getflix,GB,2,2,2,2,2,78.0
+Getflix,RO,2,2,1,2,2,78.0
+Getflix,TR,2,1,1,2,2,78.0
+GhostPath,BE,2,1,1,2,2,88.0
+GhostPath,ES,2,2,2,2,2,88.0
+GhostPath,GR,2,2,2,2,2,88.0
+GhostPath,IN,2,2,2,2,2,88.0
+GhostPath,IT,2,1,1,2,2,88.0
+HideIPVPN,DE,2,2,1,2,2,70.0
+HideIPVPN,PL,2,2,1,2,2,70.0
+HideIPVPN,SC,2,2,1,2,2,70.0
+IVPN,AU,2,1,1,2,2,95.0
+IVPN,DE,2,2,1,2,2,95.0
+IVPN,FI,2,2,1,2,2,95.0
+IVPN,HK,2,2,1,2,2,95.0
+IVPN,IL,2,2,1,2,2,95.0
+IVPN,IS,2,2,2,2,2,95.0
+IVPN,NO,2,2,1,2,2,95.0
+IVPN,PT,2,1,1,2,2,95.0
+IVPN,SE,2,1,1,2,2,95.0
+IVPN,UA,2,2,2,2,2,95.0
+IVPN,ZZ,2,1,0,2,2,95.0
+Ivacy,HK,2,1,1,2,2,95.0
+Ivacy,LU,2,2,1,2,2,95.0
+Ivacy,RO,2,2,1,2,2,95.0
+KevinVPN,AT,2,2,1,2,2,70.0
+KevinVPN,DE,2,2,2,2,2,70.0
+KevinVPN,FR,2,2,1,2,2,70.0
+Mullvad,AL,2,1,1,2,2,95.0
+Mullvad,PA,2,2,1,2,2,95.0
+NetShade,GB,2,2,2,2,2,95.0
+NetShade,US,2,2,2,2,2,95.0
+NordVPN,MK,2,1,1,2,2,95.0
+OVPN,DE,2,2,1,2,2,95.0
+Octanevpn,US,2,2,1,2,2,78.0
+OysterVPN,CA,2,2,1,2,2,95.0
+OysterVPN,NL,2,2,2,2,2,95.0
+OysterVPN,VN,2,2,2,2,2,95.0
+Private Internet Access,MD,2,2,1,2,2,95.0
+Private Internet Access,MK,2,2,1,2,2,95.0
+PrivateVPN,CY,2,2,2,2,2,91.5
+PrivateVPN,DK,2,1,1,2,2,95.0
+PrivateVPN,ES,2,1,1,2,2,95.0
+PrivateVPN,JP,2,2,1,2,2,95.0
+PrivateVPN,NO,2,2,1,2,2,95.0
+PrivateVPN,ZA,2,2,1,2,2,95.0
+ProtonVPN,AL,2,2,1,2,2,95.0
+ProtonVPN,IS,2,1,1,2,2,95.0
+Proxpn,CA,2,1,1,2,2,78.0
+Proxpn,GB,2,1,1,2,2,78.0
+Proxpn,SG,2,1,1,2,2,78.0
+PureVPN,BR,2,1,1,2,2,88.0
+PureVPN,FI,2,1,1,2,2,88.0
+RedShield VPN,BR,2,2,1,2,2,95.0
+RedShield VPN,IL,2,2,1,2,2,95.0
+Riseup VPN,CA,2,1,1,2,2,95.0
+Riseup VPN,GB,2,1,1,2,2,95.0
+Safervpn,NL,2,2,2,2,2,78.0
+Sentinel dVPN,CH,2,2,1,2,2,95.0
+Sentinel dVPN,CZ,2,2,2,2,2,95.0
+Sentinel dVPN,ID,2,2,2,2,2,95.0
+Sentinel dVPN,IS,2,2,2,2,2,95.0
+Sentinel dVPN,JP,2,2,1,2,2,95.0
+Sentinel dVPN,KG,2,2,1,2,2,95.0
+Sentinel dVPN,KR,2,2,1,2,2,95.0
+Sentinel dVPN,LT,2,1,1,2,2,95.0
+Sentinel dVPN,PT,2,2,2,2,2,95.0
+Sentinel dVPN,SA,2,2,1,2,2,95.0
+Sentinel dVPN,Unknown,2,1,1,2,2,95.0
+Sentinel dVPN,ZA,2,2,2,2,2,95.0
+SlickVPN,GB,2,2,1,2,2,88.0
+Smartdnsproxy,AU,2,2,1,2,2,78.0
+Smartdnsproxy,LU,2,2,1,2,2,78.0
+SotaVPN,GB,2,2,1,2,2,95.0
+StrongVPN,AU,2,2,1,2,2,80.0
+StrongVPN,CR,2,1,1,2,2,80.0
+Surfshark,AD,2,1,1,2,2,95.0
+Surfshark,AE,2,1,1,2,2,95.0
+Surfshark,AL,2,1,1,2,2,95.0
+Surfshark,AM,2,1,1,2,2,95.0
+Surfshark,AR,2,1,1,2,2,95.0
+Surfshark,AZ,2,1,1,2,2,95.0
+Surfshark,BA,2,1,1,2,2,95.0
+Surfshark,BD,2,1,1,2,2,95.0
+Surfshark,BG,2,2,2,2,2,95.0
+Surfshark,BN,2,1,1,2,2,95.0
+Surfshark,BO,2,1,1,2,2,95.0
+Surfshark,BR,2,2,2,2,2,95.0
+Surfshark,BS,2,1,1,2,2,95.0
+Surfshark,BT,2,1,1,2,2,95.0
+Surfshark,BZ,2,1,1,2,2,95.0
+Surfshark,CH,2,2,2,2,2,95.0
+Surfshark,CL,2,1,1,2,2,95.0
+Surfshark,CO,2,1,1,2,2,95.0
+Surfshark,CR,2,1,1,2,2,95.0
+Surfshark,CY,2,1,1,2,2,95.0
+Surfshark,CZ,2,2,2,2,2,95.0
+Surfshark,DK,2,2,1,2,2,95.0
+Surfshark,DZ,2,1,1,2,2,95.0
+Surfshark,EC,2,1,1,2,2,95.0
+Surfshark,EE,2,1,1,2,2,95.0
+Surfshark,EG,2,1,1,2,2,95.0
+Surfshark,FI,2,1,1,2,2,95.0
+Surfshark,GE,2,1,1,2,2,95.0
+Surfshark,GH,2,1,1,2,2,95.0
+Surfshark,GL,2,1,1,2,2,95.0
+Surfshark,GR,2,2,1,2,2,95.0
+Surfshark,HK,2,2,2,2,2,95.0
+Surfshark,HR,2,1,1,2,2,95.0
+Surfshark,HU,2,1,1,2,2,95.0
+Surfshark,ID,2,1,1,2,2,95.0
+Surfshark,IE,2,2,2,2,2,95.0
+Surfshark,IL,2,1,1,2,2,95.0
+Surfshark,IM,2,1,1,2,2,95.0
+Surfshark,IS,2,1,1,2,2,95.0
+Surfshark,JP,2,2,2,2,2,95.0
+Surfshark,KH,2,1,1,2,2,95.0
+Surfshark,KR,2,2,2,2,2,95.0
+Surfshark,KZ,2,1,1,2,2,95.0
+Surfshark,LA,2,1,1,2,2,95.0
+Surfshark,LI,2,1,1,2,2,95.0
+Surfshark,LT,2,1,1,2,2,95.0
+Surfshark,LU,2,1,1,2,2,95.0
+Surfshark,LV,2,1,1,2,2,95.0
+Surfshark,MA,2,1,1,2,2,95.0
+Surfshark,MC,2,1,1,2,2,95.0
+Surfshark,MD,2,1,1,2,2,95.0
+Surfshark,ME,2,1,1,2,2,95.0
+Surfshark,MK,2,1,1,2,2,95.0
+Surfshark,MM,2,1,1,2,2,95.0
+Surfshark,MN,2,1,1,2,2,95.0
+Surfshark,MO,2,1,1,2,2,95.0
+Surfshark,MT,2,1,1,2,2,95.0
+Surfshark,MX,2,2,2,2,2,95.0
+Surfshark,MY,2,2,2,2,2,95.0
+Surfshark,NG,2,1,1,2,2,95.0
+Surfshark,NL,2,2,2,2,2,95.0
+Surfshark,NO,2,1,1,2,2,95.0
+Surfshark,NP,2,1,1,2,2,95.0
+Surfshark,NZ,2,1,1,2,2,95.0
+Surfshark,PA,2,1,1,2,2,95.0
+Surfshark,PE,2,1,1,2,2,95.0
+Surfshark,PH,2,1,1,2,2,95.0
+Surfshark,PK,2,1,1,2,2,95.0
+Surfshark,PR,2,1,1,2,2,95.0
+Surfshark,PY,2,1,1,2,2,95.0
+Surfshark,RS,2,2,1,2,2,95.0
+Surfshark,SA,2,1,1,2,2,95.0
+Surfshark,SE,2,1,1,2,2,95.0
+Surfshark,SG,2,2,2,2,2,95.0
+Surfshark,SI,2,1,1,2,2,95.0
+Surfshark,SK,2,1,1,2,2,95.0
+Surfshark,TH,2,1,1,2,2,95.0
+Surfshark,TR,2,1,1,2,2,95.0
+Surfshark,TW,2,1,1,2,2,95.0
+Surfshark,UA,2,1,1,2,2,95.0
+Surfshark,UY,2,1,1,2,2,95.0
+Surfshark,UZ,2,1,1,2,2,95.0
+Surfshark,VE,2,1,1,2,2,95.0
+Surfshark,VN,2,1,1,2,2,95.0
+Surfshark,ZA,2,2,1,2,2,95.0
+SwitchVPN,CA,2,1,1,2,2,88.0
+Trust.Zone,NL,2,2,1,2,2,70.0
+Trust.Zone,UA,2,2,2,2,2,70.0
+VPN Jantit,EE,2,2,2,2,2,88.0
+VPN Jantit,KH,2,1,1,2,2,88.0
+VPN Jantit,KZ,2,1,1,2,2,88.0
+VPN Jantit,VN,2,2,1,2,2,88.0
+VPN Jantit,ZA,2,2,2,2,2,88.0
+VPN Unlimited,BG,2,2,1,2,2,70.0
+VPN Unlimited,GR,2,2,1,2,2,70.0
+VPNSecure,RO,2,1,1,2,2,88.0
+VPNSecure,UA,2,2,1,2,2,88.0
+VPNUK,DE,2,2,2,2,2,82.5
+VPNUK,FR,2,2,1,2,2,82.5
+VPNUK,IT,2,2,1,2,2,95.0
+Vpnbook,FR,2,2,1,2,2,78.0
+Vpnht,SG,2,1,0,2,2,78.0
+WorldVPN,AT,2,1,1,2,2,88.0
+WorldVPN,CA,2,2,2,2,2,88.0
+WorldVPN,SE,2,2,1,2,2,88.0
+Zoogvpn,DE,2,2,1,2,2,78.0
+Zoogvpn,IL,2,2,2,2,2,78.0
+Zoogvpn,LT,2,2,2,2,2,78.0
+uVPN,DE,2,2,1,2,2,70.0
+uVPN,GB,2,2,2,2,2,70.0
+Anonvpn,CA,1,1,1,1,1,78.0
+Anonvpn,GB,1,1,1,1,1,78.0
+Anonvpn,US,1,1,1,1,1,78.0
+AnonymousVPN,CZ,1,1,1,1,1,95.0
+AnonymousVPN,DE,1,1,1,1,1,95.0
+AnonymousVPN,FR,1,1,1,1,1,95.0
+AnonymousVPN,IT,1,1,1,1,1,95.0
+AnonymousVPN,LT,1,1,1,1,1,95.0
+AnonymousVPN,RO,1,1,1,1,1,95.0
+AnonymousVPN,SE,1,1,1,1,1,95.0
+AnonymousVPN,ZA,1,1,1,1,1,95.0
+Astrill,ID,1,1,1,1,1,80.0
+Astrill,KZ,1,1,1,1,1,78.0
+Astrill,SI,1,1,1,1,1,78.0
+Astrill,TR,1,1,1,1,1,80.0
+AzireVPN,AU,1,1,1,1,1,95.0
+AzireVPN,ID,1,1,1,1,1,95.0
+AzireVPN,TH,1,1,1,1,1,95.0
+AzireVPN,UA,1,1,1,1,1,95.0
+AzireVPN,ZA,1,1,1,1,1,95.0
+BTGuard,CA,1,1,1,1,1,70.0
+BTGuard,LT,1,1,1,1,1,70.0
+BTGuard,US,1,1,1,1,1,70.0
+CCrypto VPN,EE,1,1,1,1,1,88.0
+CCrypto VPN,US,1,1,1,1,1,88.0
+CactusVPN,AU,1,1,1,1,1,95.0
+CactusVPN,FR,1,1,1,1,1,95.0
+CactusVPN,MY,1,1,1,1,1,95.0
+CactusVPN,SG,1,1,1,1,1,95.0
+EasyHideIP,SE,1,1,1,1,1,95.0
+FastestVPN,KR,1,1,1,1,1,95.0
+FastestVPN,PT,1,1,1,1,1,95.0
+FastestVPN,TR,1,1,1,1,1,95.0
+FastestVPN,UA,1,1,1,1,1,95.0
+FastestVPN,UK,1,1,1,1,1,95.0
+FastestVPN,ZA,1,1,1,1,1,95.0
+FlowVPN,AM,1,1,0,1,1,70.0
+FlowVPN,AU,1,1,1,1,1,70.0
+FlowVPN,AZ,1,1,1,1,1,70.0
+FlowVPN,CL,1,1,1,1,1,70.0
+FlowVPN,CR,1,1,1,1,1,70.0
+FlowVPN,CY,1,1,1,1,1,70.0
+FlowVPN,DK,1,1,1,1,1,70.0
+FlowVPN,EE,1,1,1,1,1,70.0
+FlowVPN,FI,1,1,1,1,1,70.0
+FlowVPN,HR,1,1,1,1,1,70.0
+FlowVPN,ID,1,1,1,1,1,70.0
+FlowVPN,IL,1,1,1,1,1,70.0
+FlowVPN,IN,1,1,1,1,1,70.0
+FlowVPN,KZ,1,1,1,1,1,70.0
+FlowVPN,MD,1,1,1,1,1,70.0
+FlowVPN,MX,1,1,1,1,1,70.0
+FlowVPN,MY,1,1,1,1,1,70.0
+FlowVPN,PA,1,1,1,1,1,70.0
+FlowVPN,PL,1,1,1,1,1,70.0
+FlowVPN,PT,1,1,1,1,1,70.0
+FlowVPN,TN,1,1,1,1,1,70.0
+FreeVPN,CH,1,1,1,1,1,88.0
+FreeVPN,EE,1,1,1,1,1,88.0
+FreeVPN,FI,1,1,1,1,1,88.0
+FreeVPN,GB,1,1,1,1,1,88.0
+FreeVPN,LU,1,1,1,1,1,88.0
+FreeVPN,SE,1,1,1,1,1,88.0
+FreeVPN,SG,1,1,1,1,1,88.0
+Freevpn,NL,1,1,1,1,1,78.0
+Froot,FR,1,1,1,1,1,78.0
+Froot,PA,1,1,1,1,1,78.0
+Getflix,AU,1,1,1,1,1,78.0
+Getflix,CA,1,1,1,1,1,78.0
+Getflix,DK,1,1,1,1,1,78.0
+Getflix,GR,1,1,1,1,1,78.0
+Getflix,NL,1,1,1,1,1,78.0
+Getflix,NO,1,1,1,1,1,78.0
+Getflix,PA,1,1,1,1,1,78.0
+Getflix,SE,1,1,1,1,1,78.0
+GhostPath,AT,1,1,1,1,1,88.0
+GhostPath,BR,1,1,1,1,1,88.0
+GhostPath,CH,1,1,1,1,1,88.0
+GhostPath,CL,1,1,1,1,1,88.0
+GhostPath,DK,1,1,1,1,1,88.0
+GhostPath,EE,1,1,1,1,1,88.0
+GhostPath,HK,1,1,1,1,1,88.0
+GhostPath,HU,1,1,1,1,1,88.0
+GhostPath,ID,1,1,1,1,1,88.0
+GhostPath,IE,1,1,1,1,1,88.0
+GhostPath,IL,1,1,1,1,1,88.0
+GhostPath,IS,1,1,1,1,1,88.0
+GhostPath,JP,1,1,1,1,1,88.0
+GhostPath,LU,1,1,1,1,1,88.0
+GhostPath,MD,1,1,1,1,1,88.0
+GhostPath,MY,1,1,1,1,1,88.0
+GhostPath,NO,1,1,1,1,1,88.0
+GhostPath,PA,1,1,1,1,1,88.0
+GhostPath,PL,1,1,1,1,1,88.0
+GhostPath,PT,1,1,1,1,1,88.0
+GhostPath,RO,1,1,1,1,1,88.0
+GhostPath,RS,1,1,1,1,1,88.0
+GhostPath,SI,1,1,1,1,1,88.0
+GhostPath,TH,1,1,1,1,1,88.0
+GhostPath,TR,1,1,1,1,1,88.0
+GhostPath,UA,1,1,1,1,1,88.0
+Goosevpn,GB,1,1,1,1,1,78.0
+Hide.me,CH,1,1,1,1,1,95.0
+Hide.me,PL,1,1,1,1,1,95.0
+Hide.me,US,1,1,1,1,1,95.0
+HideIPVPN,ES,1,1,1,1,1,70.0
+HideIPVPN,LT,1,1,1,1,1,70.0
+HideIPVPN,RU,1,1,1,1,1,70.0
+Hotspotshield,BD,1,1,1,1,1,78.0
+Hotspotshield,BR,1,1,0,1,1,78.0
+Hotspotshield,CN,1,1,0,1,1,78.0
+Hotspotshield,DE,1,1,0,1,1,78.0
+Hotspotshield,FR,1,1,1,1,1,78.0
+Hotspotshield,LT,1,1,1,1,1,78.0
+Hotspotshield,MH,1,1,1,1,1,78.0
+Hotspotshield,PA,1,1,1,1,1,78.0
+Hotspotshield,SG,1,1,1,1,1,78.0
+Hotspotshield,TW,1,1,1,1,1,78.0
+Hotspotshield,UA,1,1,1,1,1,78.0
+Hotspotshield,ZA,1,1,0,1,1,78.0
+IVPN,BR,1,1,1,1,1,95.0
+IVPN,LU,1,1,1,1,1,95.0
+Integrityvpn,SE,1,1,1,1,1,78.0
+Ivacy,AF,1,1,1,1,1,95.0
+Ivacy,AL,1,1,1,1,1,95.0
+Ivacy,AT,1,1,1,1,1,95.0
+Ivacy,BE,1,1,1,1,1,95.0
+Ivacy,BG,1,1,1,1,1,95.0
+Ivacy,BN,1,1,1,1,1,95.0
+Ivacy,BR,1,1,1,1,1,95.0
+Ivacy,CH,1,1,1,1,1,95.0
+Ivacy,CL,1,1,1,1,1,95.0
+Ivacy,DK,1,1,1,1,1,95.0
+Ivacy,EG,1,1,1,1,1,95.0
+Ivacy,ES,1,1,1,1,1,95.0
+Ivacy,FI,1,1,1,1,1,95.0
+Ivacy,FR,1,1,1,1,1,95.0
+Ivacy,GR,1,1,1,1,1,95.0
+Ivacy,HU,1,1,1,1,1,95.0
+Ivacy,IE,1,1,1,1,1,95.0
+Ivacy,LT,1,1,1,1,1,95.0
+Ivacy,LV,1,1,1,1,1,95.0
+Ivacy,MD,1,1,1,1,1,95.0
+Ivacy,NG,1,1,1,1,1,95.0
+Ivacy,NL,1,1,1,1,1,95.0
+Ivacy,NO,1,1,1,1,1,95.0
+Ivacy,OM,1,1,1,1,1,95.0
+Ivacy,PA,1,1,1,1,1,95.0
+Ivacy,PH,1,1,1,1,1,95.0
+Ivacy,PL,1,1,1,1,1,95.0
+Ivacy,PT,1,1,1,1,1,95.0
+Ivacy,RS,1,1,1,1,1,95.0
+Ivacy,RU,1,1,1,1,1,95.0
+Ivacy,SE,1,1,1,1,1,95.0
+Ivacy,SG,1,1,1,1,1,95.0
+Ivacy,SK,1,1,1,1,1,95.0
+Ivacy,TR,1,1,1,1,1,95.0
+Ivacy,TW,1,1,1,1,1,95.0
+Ivacy,UA,1,1,1,1,1,95.0
+Ivacy,VN,1,1,1,1,1,95.0
+KevinVPN,CA,1,1,1,1,1,70.0
+KevinVPN,CH,1,1,1,1,1,70.0
+KevinVPN,IT,1,1,1,1,1,70.0
+KevinVPN,LU,1,1,1,1,1,70.0
+KevinVPN,RO,1,1,1,1,1,70.0
+KevinVPN,SE,1,1,1,1,1,70.0
+KevinVPN,SG,1,1,1,1,1,70.0
+KevinVPN,TR,1,1,1,1,1,70.0
+KeyDrop,DE,1,1,1,1,1,70.0
+Kompot VPN,AR,1,1,1,1,1,80.0
+Le VPN,ES,1,1,1,1,1,70.0
+Le VPN,GB,1,1,1,1,1,70.0
+Le VPN,HK,1,1,1,1,1,70.0
+Le VPN,IS,1,1,1,1,1,70.0
+Le VPN,SE,1,1,1,1,1,70.0
+Le VPN,US,1,1,1,1,1,70.0
+NetShade,DE,1,1,1,1,1,95.0
+OVPN,CA,1,1,1,1,1,95.0
+OVPN,IT,1,1,1,1,1,95.0
+OysterVPN,AG,1,1,1,1,1,95.0
+OysterVPN,AU,1,1,1,1,1,95.0
+OysterVPN,BG,1,1,1,1,1,95.0
+OysterVPN,BR,1,1,1,1,1,95.0
+OysterVPN,CH,1,1,1,1,1,95.0
+OysterVPN,CY,1,1,1,1,1,95.0
+OysterVPN,CZ,1,1,1,1,1,95.0
+OysterVPN,DE,1,1,1,1,1,95.0
+OysterVPN,FL,1,1,1,1,1,95.0
+OysterVPN,FR,1,1,1,1,1,95.0
+OysterVPN,GB,1,1,1,1,1,95.0
+OysterVPN,HK,1,1,1,1,1,95.0
+OysterVPN,IT,1,1,1,1,1,95.0
+OysterVPN,JP,1,1,1,1,1,95.0
+OysterVPN,KR,1,1,1,1,1,95.0
+OysterVPN,MY,1,1,1,1,1,95.0
+OysterVPN,NA,1,1,1,1,1,95.0
+OysterVPN,PH,1,1,1,1,1,95.0
+OysterVPN,PK,1,1,1,1,1,95.0
+OysterVPN,PL,1,1,1,1,1,95.0
+OysterVPN,PT,1,1,1,1,1,95.0
+OysterVPN,RU,1,1,1,1,1,95.0
+OysterVPN,SA,1,1,1,1,1,95.0
+OysterVPN,SE,1,1,1,1,1,95.0
+OysterVPN,SG,1,1,1,1,1,95.0
+OysterVPN,TH,1,1,1,1,1,95.0
+OysterVPN,TR,1,1,1,1,1,95.0
+OysterVPN,TW,1,1,1,1,1,95.0
+OysterVPN,UA,1,1,1,1,1,95.0
+OysterVPN,UK,1,1,1,1,1,95.0
+PhantomPeer,CH,1,1,1,1,1,88.0
+PhantomPeer,RO,1,1,1,1,1,88.0
+PhantomPeer,SE,1,1,1,1,1,88.0
+Privado,RO,1,1,1,1,1,95.0
+Private Internet Access,IN,1,1,0,1,1,95.0
+PrivateVPN,AE,1,1,1,1,1,95.0
+PrivateVPN,AR,1,1,1,1,1,95.0
+PrivateVPN,AT,1,1,1,1,1,95.0
+PrivateVPN,BE,1,1,1,1,1,95.0
+PrivateVPN,BG,1,1,1,1,1,95.0
+PrivateVPN,BR,1,1,1,1,1,95.0
+PrivateVPN,CL,1,1,1,1,1,95.0
+PrivateVPN,CR,1,1,1,1,1,95.0
+PrivateVPN,CZ,1,1,1,1,1,95.0
+PrivateVPN,EE,1,1,1,1,1,88.0
+PrivateVPN,FI,1,1,1,1,1,88.0
+PrivateVPN,GR,1,1,1,1,1,95.0
+PrivateVPN,HK,1,1,1,1,1,95.0
+PrivateVPN,HR,1,1,1,1,1,95.0
+PrivateVPN,HU,1,1,1,1,1,95.0
+PrivateVPN,ID,1,1,1,1,1,95.0
+PrivateVPN,IE,1,1,1,1,1,95.0
+PrivateVPN,IL,1,1,1,1,1,88.0
+PrivateVPN,IM,1,1,1,1,1,95.0
+PrivateVPN,IS,1,1,1,1,1,95.0
+PrivateVPN,KR,1,1,1,1,1,95.0
+PrivateVPN,LT,1,1,1,1,1,95.0
+PrivateVPN,LU,1,1,1,1,1,88.0
+PrivateVPN,LV,1,1,1,1,1,95.0
+PrivateVPN,MD,1,1,1,1,1,95.0
+PrivateVPN,MT,1,1,1,1,1,95.0
+PrivateVPN,MX,1,1,1,1,1,95.0
+PrivateVPN,MY,1,1,1,1,1,95.0
+PrivateVPN,NZ,1,1,1,1,1,95.0
+PrivateVPN,PA,1,1,1,1,1,95.0
+PrivateVPN,PE,1,1,1,1,1,95.0
+PrivateVPN,PH,1,1,1,1,1,95.0
+PrivateVPN,PT,1,1,1,1,1,95.0
+PrivateVPN,RO,1,1,1,1,1,95.0
+PrivateVPN,RS,1,1,1,1,1,95.0
+PrivateVPN,SG,1,1,1,1,1,95.0
+PrivateVPN,SK,1,1,1,1,1,95.0
+PrivateVPN,TH,1,1,1,1,1,95.0
+PrivateVPN,TR,1,1,1,1,1,95.0
+PrivateVPN,TW,1,1,1,1,1,95.0
+PrivateVPN,UA,1,1,1,1,1,95.0
+PrivateVPN,VN,1,1,1,1,1,95.0
+ProtonVPN,BA,1,1,1,1,1,95.0
+ProtonVPN,CA,1,1,1,1,1,95.0
+ProtonVPN,CY,1,1,1,1,1,95.0
+ProtonVPN,EU,1,1,1,1,1,95.0
+ProtonVPN,FI,1,1,1,1,1,95.0
+ProtonVPN,HR,1,1,1,1,1,95.0
+ProtonVPN,ID,1,1,1,1,1,95.0
+ProtonVPN,IN,1,1,1,1,1,95.0
+ProtonVPN,LT,1,1,1,1,1,95.0
+ProtonVPN,MD,1,1,1,1,1,95.0
+ProtonVPN,MK,1,1,1,1,1,95.0
+ProtonVPN,PS,1,1,1,1,1,95.0
+ProtonVPN,SC,1,1,1,1,1,95.0
+ProtonVPN,SE,1,1,1,1,1,95.0
+ProtonVPN,TW,1,1,1,1,1,95.0
+Proxpn,CH,1,1,1,1,1,78.0
+Proxpn,CR,1,1,1,1,1,78.0
+Proxpn,HK,1,1,1,1,1,78.0
+Proxpn,IS,1,1,1,1,1,78.0
+RedShield VPN,CA,1,1,1,1,1,95.0
+RedShield VPN,FI,1,1,1,1,1,95.0
+RedShield VPN,TH,1,1,1,1,1,95.0
+RedShield VPN,TR,1,1,1,1,1,95.0
+Safervpn,CH,1,1,1,1,1,78.0
+Safervpn,CY,1,1,1,1,1,78.0
+Safervpn,ES,1,1,1,1,1,78.0
+Safervpn,FI,1,1,1,1,1,78.0
+Safervpn,FR,1,1,1,1,1,78.0
+Safervpn,GB,1,1,1,1,1,78.0
+Safervpn,HK,1,1,1,1,1,78.0
+Safervpn,HU,1,1,1,1,1,78.0
+Safervpn,IL,1,1,1,1,1,78.0
+Safervpn,NO,1,1,1,1,1,78.0
+Safervpn,PT,1,1,1,1,1,78.0
+Safervpn,RO,1,1,1,1,1,78.0
+Safervpn,TH,1,1,1,1,1,78.0
+Safervpn,ZA,1,1,1,1,1,78.0
+Sentinel dVPN,AL,1,1,1,1,1,95.0
+Sentinel dVPN,AT,1,1,1,1,1,95.0
+Sentinel dVPN,BG,1,1,1,1,1,95.0
+Sentinel dVPN,CL,1,1,1,1,1,95.0
+Sentinel dVPN,CR,1,1,1,1,1,95.0
+Sentinel dVPN,DK,1,1,1,1,1,95.0
+Sentinel dVPN,ES,1,1,1,1,1,95.0
+Sentinel dVPN,IL,1,1,1,1,1,95.0
+Sentinel dVPN,JM,1,1,1,1,1,95.0
+Sentinel dVPN,JO,1,1,1,1,1,95.0
+Sentinel dVPN,NZ,1,1,1,1,1,95.0
+Sentinel dVPN,SC,1,1,1,1,1,95.0
+Sentinel dVPN,TH,1,1,1,1,1,95.0
+SlickVPN,AT,1,1,1,1,1,88.0
+SlickVPN,SG,1,1,1,1,1,88.0
+SmartVPN,CH,1,1,1,1,1,88.0
+SmartVPN,ES,1,1,1,1,1,88.0
+SmartVPN,FR,1,1,1,1,1,88.0
+SmartVPN,IL,1,1,1,1,1,88.0
+SmartVPN,SE,1,1,1,1,1,88.0
+SmartVPN,SI,1,1,1,1,1,88.0
+Smartdnsproxy,AT,1,1,1,1,1,78.0
+Smartdnsproxy,CA,1,1,1,1,1,78.0
+Smartdnsproxy,DK,1,1,1,1,1,78.0
+Smartdnsproxy,GR,1,1,1,1,1,78.0
+Smartdnsproxy,IT,1,1,1,1,1,78.0
+Smartdnsproxy,NO,1,1,1,1,1,78.0
+Smartdnsproxy,PA,1,1,1,1,1,78.0
+Smartdnsproxy,SE,1,1,1,1,1,78.0
+Smartdnsproxy,TR,1,1,1,1,1,78.0
+SotaVPN,LV,1,1,1,1,1,95.0
+SotaVPN,NL,1,1,1,1,1,95.0
+StrongVPN,FI,1,1,1,1,1,80.0
+Surfshark,AT,1,1,1,1,1,95.0
+Surfshark,LK,1,1,1,1,1,95.0
+Surfshark,RO,1,1,1,1,1,95.0
+SwitchVPN,AT,1,1,1,1,1,88.0
+SwitchVPN,BE,1,1,1,1,1,88.0
+SwitchVPN,CH,1,1,1,1,1,88.0
+SwitchVPN,CZ,1,1,1,1,1,88.0
+SwitchVPN,FR,1,1,1,1,1,88.0
+SwitchVPN,IN,1,1,1,1,1,88.0
+SwitchVPN,KR,1,1,1,1,1,88.0
+SwitchVPN,MY,1,1,1,1,1,88.0
+SwitchVPN,NO,1,1,1,1,1,88.0
+SwitchVPN,SG,1,1,1,1,1,88.0
+Trust.Zone,AL,1,1,1,1,1,70.0
+Trust.Zone,AU,1,1,1,1,1,70.0
+Trust.Zone,IL,1,1,1,1,1,70.0
+Trust.Zone,PL,1,1,1,1,1,70.0
+Trust.Zone,SC,1,1,1,1,1,70.0
+Trust.Zone,TR,1,1,1,1,1,70.0
+TunnelBear,CA,1,1,1,1,1,95.0
+TunnelBear,IT,1,1,1,1,1,95.0
+VPN Gate,EU,1,1,1,1,1,78.0
+VPN Gate,LA,1,1,1,1,1,78.0
+VPN Gate,RO,1,1,1,1,1,78.0
+VPN Gate,UA,1,1,1,1,1,78.0
+VPN Gate,VN,1,1,1,1,1,78.0
+VPN Jantit,BG,1,1,1,1,1,88.0
+VPN Jantit,MD,1,1,1,1,1,88.0
+VPN Jantit,RO,1,1,1,1,1,88.0
+VPN Jantit,TR,1,1,1,1,1,88.0
+VPN Unlimited,UA,1,1,1,1,1,70.0
+VPN Unlimited,ZA,1,1,1,1,1,70.0
+VPN.ac,IT,1,1,0,1,1,95.0
+VPN.ac,LT,1,1,1,1,1,95.0
+VPN.ac,NO,1,1,1,1,1,95.0
+VPN.ac,PA,1,1,1,1,1,95.0
+VPN.ac,PT,1,1,1,1,1,95.0
+VPNSecure,HK,1,1,1,1,1,88.0
+VPNSecure,IL,1,1,1,1,1,88.0
+VPNSecure,LV,1,1,1,1,1,88.0
+VPNSecure,SE,1,1,1,1,1,88.0
+VPNUK,ES,1,1,1,1,1,70.0
+VPNUK,HK,1,1,1,1,1,95.0
+VPNUK,IE,1,1,1,1,1,95.0
+VPNUK,TR,1,1,1,1,1,95.0
+Vpnfacile,GB,1,1,1,1,1,78.0
+Vpnfacile,US,1,1,1,1,1,78.0
+Vpnht,DK,1,1,1,1,1,78.0
+Vpnht,JP,1,1,1,1,1,78.0
+Vpnht,KR,1,1,1,1,1,78.0
+Vpnht,US,1,1,1,1,1,78.0
+WiTopia,EG,1,1,0,1,1,95.0
+WorldVPN,BE,1,1,1,1,1,88.0
+WorldVPN,BR,1,1,1,1,1,88.0
+WorldVPN,CL,1,1,1,1,1,88.0
+WorldVPN,CN,1,1,1,1,1,88.0
+WorldVPN,ES,1,1,1,1,1,88.0
+WorldVPN,GR,1,1,1,1,1,88.0
+WorldVPN,IE,1,1,1,1,1,88.0
+WorldVPN,IS,1,1,1,1,1,88.0
+WorldVPN,JP,1,1,1,1,1,88.0
+WorldVPN,LI,1,1,1,1,1,88.0
+WorldVPN,LU,1,1,1,1,1,88.0
+WorldVPN,MY,1,1,1,1,1,88.0
+WorldVPN,NO,1,1,1,1,1,88.0
+WorldVPN,PH,1,1,1,1,1,88.0
+WorldVPN,PT,1,1,1,1,1,88.0
+WorldVPN,RO,1,1,1,1,1,88.0
+WorldVPN,TR,1,1,1,1,1,88.0
+Zoogvpn,AM,1,1,1,1,1,78.0
+Zoogvpn,AT,1,1,1,1,1,78.0
+Zoogvpn,BR,1,1,1,1,1,78.0
+Zoogvpn,EE,1,1,1,1,1,78.0
+Zoogvpn,FI,1,1,1,1,1,78.0
+Zoogvpn,GE,1,1,1,1,1,78.0
+Zoogvpn,HU,1,1,1,1,1,78.0
+Zoogvpn,ID,1,1,1,1,1,78.0
+Zoogvpn,IT,1,1,1,1,1,78.0
+Zoogvpn,KZ,1,1,1,1,1,78.0
+Zoogvpn,LV,1,1,1,1,1,78.0
+Zoogvpn,MD,1,1,1,1,1,78.0
+Zoogvpn,NZ,1,1,1,1,1,78.0
+Zoogvpn,TH,1,1,1,1,1,78.0
+Zoogvpn,TR,1,1,1,1,1,78.0
+Zoogvpn,VN,1,1,1,1,1,78.0
+Zoogvpn,ZA,1,1,1,1,1,78.0
+uVPN,LU,1,1,1,1,1,70.0

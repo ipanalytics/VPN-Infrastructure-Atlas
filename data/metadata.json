@@ -1,0 +1,16 @@
+{
+  "title": "VPN Infrastructure Atlas",
+  "generated_at": "2026-05-19T10:04:10Z",
+  "input_rows": 2382989,
+  "included_rows": 34534,
+  "scope": "type=vpn only, excluding Tor, proxy, and relay records",
+  "providers": 86,
+  "countries": 123,
+  "asns": 768,
+  "skipped": {
+    "bad_ip": 2348,
+    "blocked_provider": 943,
+    "non_vpn_type": 2345164
+  },
+  "notes": "Aggregate-only public dashboard dataset for VPN provider records. Tor, proxy, and relay records are excluded. No raw VPN configuration files or per-IP provider feeds are included."
+}
