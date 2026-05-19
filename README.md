@@ -14,19 +14,7 @@ The project is designed for defensive research, fraud/risk feature engineering, 
 
 **Open the interactive atlas:** https://ipanalytics.github.io/VPN-Infrastructure-Atlas/
 
-## GitHub Summary
 
-**Suggested repo description:**
-
-```text
-Interactive VPN infrastructure atlas: aggregate provider footprint by reported endpoint country, ASN, and hosting network. No raw configs or per-IP feed.
-```
-
-**Suggested topics:**
-
-```text
-vpn-intelligence, ip-reputation, asn-analysis, network-intelligence, fraud-detection, proxy-detection, cybersecurity, threat-intelligence, data-visualization, github-pages
-```
 
 ## What You Can Explore
 
