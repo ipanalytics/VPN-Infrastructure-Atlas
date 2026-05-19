@@ -35,6 +35,11 @@ The atlas includes:
 | World map | Reported/enriched endpoint-country VPN footprint by IP count, `/24` count, ASN count, or hosting IP count. |
 | Provider filter | Narrow the map and tables to one provider. |
 | Country filter | Narrow the map and tables to one reported/enriched endpoint country. |
+| ASN filter | Narrow the map and tables to one ASN/network operator. |
+| Linked filters | Provider, country, ASN, and minimum-IP filters constrain each other. |
+| Click actions | Click a country on the map, a provider bar, an ASN row, or a country row to filter the atlas. |
+| Shareable URL | Current filter state is stored in the URL query string. |
+| Export CSV | Download the current filtered `provider-country-ASN` view as CSV. |
 | Country table | Top provider/reported-country footprints with IP count, `/24` count, and ASN count. |
 | Method & legal notes | Short public-use notes explaining scope, limitations, and license guidance. |
 
