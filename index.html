@@ -65,7 +65,7 @@
     }
 
     .toolbar {
-      grid-template-columns: minmax(160px, 210px) minmax(150px, 185px) minmax(150px, 210px) minmax(180px, 260px) minmax(120px, 150px) minmax(170px, 1fr);
+      grid-template-columns: minmax(160px, 210px) minmax(150px, 185px) minmax(150px, 210px) minmax(180px, 260px) minmax(120px, 150px) minmax(170px, 1fr) 156px;
       align-items: end;
       background: var(--panel);
       border: 1px solid var(--line);
@@ -92,6 +92,30 @@
       background: #fff;
       color: var(--text);
       font-size: 14px;
+    }
+
+    button {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 12px;
+      background: #fff;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .button-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
     }
 
     .stats {
@@ -144,6 +168,11 @@
       height: 590px;
     }
 
+    #providerChart {
+      width: 100%;
+      height: 210px;
+    }
+
     .grid {
       grid-template-columns: 1fr;
       align-items: start;
@@ -183,6 +212,14 @@
     td:first-child,
     th:first-child {
       width: 36%;
+    }
+
+    tbody tr {
+      cursor: pointer;
+    }
+
+    tbody tr:hover {
+      background: #f3f7fc;
     }
 
     .table-wrap {
@@ -337,6 +374,13 @@
         Table search
         <input id="search" type="search" placeholder="Provider or country">
       </label>
+      <label>
+        Actions
+        <span class="button-row">
+          <button id="reset" type="button">Reset</button>
+          <button id="export" type="button">CSV</button>
+        </span>
+      </label>
     </section>
 
     <section class="stats" aria-label="Summary">
@@ -357,6 +401,11 @@
       </div>
 
       <div class="side-stack">
+        <div class="panel">
+          <h2>Top Providers In Current View</h2>
+          <div id="providerChart"></div>
+        </div>
+
         <div class="panel">
           <h2>Top ASN Footprint</h2>
           <div class="table-wrap">
@@ -506,6 +555,38 @@
 
     function formatNumber(value) {
       return new Intl.NumberFormat("en-US").format(value);
+    }
+
+    function setSelectValue(id, value) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.value = value;
+      }
+    }
+
+    function applyUrlState() {
+      const params = new URLSearchParams(window.location.search);
+      state.provider = params.get("provider") || "All";
+      state.country = params.get("country") || "All";
+      state.asn = params.get("asn") || "All";
+      state.metric = metricLabels[params.get("metric")] ? params.get("metric") : "ip_count";
+      state.minIps = Number.parseInt(params.get("min_ips") || "0", 10) || 0;
+      state.search = params.get("search") || "";
+      setSelectValue("metric", state.metric);
+      setSelectValue("minIps", String(state.minIps));
+      document.getElementById("search").value = state.search;
+    }
+
+    function updateUrl() {
+      const params = new URLSearchParams();
+      if (state.provider !== "All") params.set("provider", state.provider);
+      if (state.country !== "All") params.set("country", state.country);
+      if (state.asn !== "All") params.set("asn", state.asn);
+      if (state.metric !== "ip_count") params.set("metric", state.metric);
+      if (state.minIps > 0) params.set("min_ips", String(state.minIps));
+      if (state.search) params.set("search", state.search);
+      const next = `${window.location.pathname}${params.toString() ? `?${params}` : ""}${window.location.hash}`;
+      window.history.replaceState(null, "", next);
     }
 
     function rowMatches(row, exclude = "") {
@@ -679,6 +760,7 @@
         type: "choropleth",
         locationmode: "country names",
         locations,
+        customdata: codes,
         z: values,
         text: codes.map((code, index) => `${code} - ${locations[index]}: ${formatNumber(values[index])}`),
         colorscale: [
@@ -705,6 +787,53 @@
         displayModeBar: false,
         responsive: true
       });
+      const mapEl = document.getElementById("map");
+      if (mapEl.removeAllListeners) {
+        mapEl.removeAllListeners("plotly_click");
+      }
+      mapEl.on("plotly_click", (event) => {
+        const code = event.points && event.points[0] && event.points[0].customdata;
+        if (!code) return;
+        state.country = code;
+        syncFilterOptions();
+        update();
+      });
+    }
+
+    function updateProviderChart() {
+      const providerRows = aggregateBy(["provider"], filteredBase())
+        .sort((a, b) => intValue(b, "ip_count") - intValue(a, "ip_count"))
+        .slice(0, 10)
+        .reverse();
+      Plotly.react("providerChart", [{
+        type: "bar",
+        orientation: "h",
+        y: providerRows.map((row) => row.provider),
+        x: providerRows.map((row) => intValue(row, "ip_count")),
+        marker: { color: "#1667d9" },
+        hovertemplate: "%{y}<br>IPs: %{x:,}<extra></extra>"
+      }], {
+        margin: { t: 6, r: 12, b: 28, l: 112 },
+        paper_bgcolor: "#ffffff",
+        plot_bgcolor: "#ffffff",
+        xaxis: { fixedrange: true, gridcolor: "#edf1f6", zeroline: false },
+        yaxis: { fixedrange: true, automargin: true },
+        bargap: 0.32
+      }, {
+        displayModeBar: false,
+        responsive: true
+      });
+      const chartEl = document.getElementById("providerChart");
+      if (chartEl.removeAllListeners) {
+        chartEl.removeAllListeners("plotly_click");
+      }
+      chartEl.on("plotly_click", (event) => {
+        const provider = event.points && event.points[0] && event.points[0].y;
+        if (!provider) return;
+        state.provider = provider;
+        syncFilterOptions();
+        update();
+      });
     }
 
     function renderRows() {
@@ -713,7 +842,7 @@
         .sort((a, b) => intValue(b, "ip_count") - intValue(a, "ip_count"))
         .slice(0, 60);
       document.getElementById("asnRows").innerHTML = asnRows.map((row) => `
-        <tr>
+        <tr data-asn="${row.asn}" title="Filter by ${row.asn === "0" ? "Unknown ASN" : `AS${row.asn}`}">
           <td>${row.provider}</td>
           <td><b>${row.asn === "0" ? "Unknown ASN" : `AS${row.asn}`}</b><br>${row.asn_org || "Unknown"}</td>
           <td>${formatNumber(intValue(row, "ip_count"))}</td>
@@ -726,7 +855,7 @@
         .sort((a, b) => intValue(b, "ip_count") - intValue(a, "ip_count"))
         .slice(0, 60);
       document.getElementById("countryRows").innerHTML = countryRows.map((row) => `
-        <tr>
+        <tr data-country="${row.country}" title="Filter by ${countryName(row.country)}">
           <td>${row.provider}</td>
           <td>${countryName(row.country)}</td>
           <td>${formatNumber(intValue(row, "ip_count"))}</td>
@@ -734,12 +863,54 @@
           <td>${formatNumber(intValue(row, "asn_count"))}</td>
         </tr>
       `).join("");
+      document.querySelectorAll("#asnRows tr[data-asn]").forEach((row) => {
+        row.addEventListener("click", () => {
+          const asn = row.getAttribute("data-asn");
+          if (!asn || asn === "0") return;
+          state.asn = asn;
+          syncFilterOptions();
+          update();
+        });
+      });
+      document.querySelectorAll("#countryRows tr[data-country]").forEach((row) => {
+        row.addEventListener("click", () => {
+          const country = row.getAttribute("data-country");
+          if (!country || country === "ZZ") return;
+          state.country = country;
+          syncFilterOptions();
+          update();
+        });
+      });
     }
 
     function update() {
       updateStats();
       updateMap();
+      updateProviderChart();
       renderRows();
+      updateUrl();
+    }
+
+    function csvEscape(value) {
+      const text = String(value ?? "");
+      return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+    }
+
+    function exportCurrentView() {
+      const fields = ["provider", "country", "asn", "asn_org", "ip_count", "prefix_count", "hosting_ip_count", "exit_node_count", "avg_confidence"];
+      const lines = [fields.join(",")];
+      for (const row of filteredBase().sort((a, b) => intValue(b, "ip_count") - intValue(a, "ip_count"))) {
+        lines.push(fields.map((field) => csvEscape(row[field])).join(","));
+      }
+      const blob = new Blob([`${lines.join("\n")}\n`], { type: "text/csv;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "vpn-atlas-filtered-view.csv";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
     }
 
     async function init() {
@@ -753,6 +924,7 @@
       state.providerCountry = parseCsv(providerCountryText);
       state.providerAsn = parseCsv(providerAsnText);
       state.metadata = metadata;
+      applyUrlState();
       syncFilterOptions();
       document.getElementById("provider").addEventListener("change", (event) => {
         state.provider = event.target.value;
@@ -784,6 +956,20 @@
         renderRows();
         updateStats();
       });
+      document.getElementById("reset").addEventListener("click", () => {
+        state.provider = "All";
+        state.country = "All";
+        state.asn = "All";
+        state.minIps = 0;
+        state.metric = "ip_count";
+        state.search = "";
+        document.getElementById("metric").value = state.metric;
+        document.getElementById("minIps").value = String(state.minIps);
+        document.getElementById("search").value = "";
+        syncFilterOptions();
+        update();
+      });
+      document.getElementById("export").addEventListener("click", exportCurrentView);
       update();
     }
 
