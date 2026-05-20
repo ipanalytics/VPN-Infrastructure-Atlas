@@ -1,142 +1,169 @@
 # VPN Infrastructure Atlas
-[Open Interactive Atlas](https://ipanalytics.github.io/VPN-Infrastructure-Atlas/)
-## Open Interactive Map
+
+Interactive public atlas and aggregate infrastructure dataset for analyzing VPN endpoint distribution across countries, ASNs, and hosting networks.
+
+The project provides a static GitHub Pages dashboard and research-oriented aggregate datasets for:
+
+- VPN infrastructure visibility
+- ASN and hosting analysis
+- VPN/proxy detection research
+- fraud and risk feature engineering
+- infrastructure concentration analysis
+- security and threat-intelligence enrichment
+
+<p align="center">
+  <img src="./site/banner.png" alt="VPN Infrastructure Atlas" width="100%">
+</p>
+
+## Live Atlas
 
 https://ipanalytics.github.io/VPN-Infrastructure-Atlas/
 
-Static public dashboard and aggregate CSV dataset for exploring VPN provider infrastructure footprint by reported endpoint country and ASN/network operator.
+## Overview
 
-This repository does **not** publish raw VPN IP lists. It publishes aggregate signals that help researchers understand where VPN endpoint infrastructure appears, which networks host it, and how provider footprints are distributed.
+VPN Infrastructure Atlas visualizes aggregate VPN endpoint footprint across:
 
-The project is designed for defensive research, fraud/risk feature engineering, source-quality review, and VPN/proxy detection methodology.
+- endpoint countries
+- ASN/network operators
+- hosting providers
+- VPN brands/providers
 
-![VPN Infrastructure Atlas dashboard](assets/vpn-infrastructure-atlas.jpg)
+The repository intentionally publishes aggregate infrastructure signals only.
 
-**Open the interactive atlas:** https://ipanalytics.github.io/VPN-Infrastructure-Atlas/
+No raw VPN IP lists, credentials, client assets, configuration archives, or private provider data are included.
 
+The dashboard is fully static and runs entirely in the browser using:
 
+- HTML
+- JavaScript
+- CSV datasets
+- GitHub Pages
 
-## What You Can Explore
+No backend or database is required.
 
-- which reported countries have the largest observed VPN endpoint footprint;
-- which ASNs/network operators host the most VPN endpoint infrastructure;
-- how one provider's footprint is distributed across countries and ASNs;
-- how concentrated or distributed VPN infrastructure appears in a current snapshot;
-- aggregate context useful for IP reputation and VPN/proxy detection research.
+---
 
-## Interactive Atlas
+## Features
 
-Open [`index.html`](index.html) through GitHub Pages or any static web server to explore the current snapshot.
+### Interactive World Map
 
-The atlas includes:
+Explore VPN endpoint distribution by:
 
-| View | Description |
-|---|---|
-| World map | Reported/enriched endpoint-country VPN footprint by IP count, `/24` count, ASN count, or hosting IP count. |
-| Provider filter | Narrow the map and tables to one provider. |
-| Country filter | Narrow the map and tables to one reported/enriched endpoint country. |
-| ASN filter | Narrow the map and tables to one ASN/network operator. |
-| Linked filters | Provider, country, ASN, and minimum-IP filters constrain each other. |
-| Click actions | Click a country on the map, a provider bar, an ASN row, or a country row to filter the atlas. |
-| Shareable URL | Current filter state is stored in the URL query string. |
-| Export CSV | Download the current filtered `provider-country-ASN` view as CSV. |
-| Country table | Top provider/reported-country footprints with IP count, `/24` count, and ASN count. |
-| Method & legal notes | Short public-use notes explaining scope, limitations, and license guidance. |
+- IP count
+- `/24` count
+- ASN count
+- hosting-network concentration
 
-The dashboard is static: HTML, JavaScript, and CSV files only. It does not need a backend.
+### ASN Explorer
 
-Current MVP scope:
+Analyze which ASNs and network operators host the largest observed VPN infrastructure footprint.
 
-- current snapshot only, no historical/churn data;
-- records where collector output has `type=vpn`;
-- Tor, proxy, and relay records excluded;
-- aggregate rows only, no raw per-IP feed;
-- countries are reported/enriched endpoint-location context, not ASN registration, provider ownership, or company jurisdiction.
+### Provider Analysis
 
-## Country Semantics
+Inspect how provider infrastructure is distributed across:
 
-The atlas uses **reported/enriched endpoint country**.
+- countries
+- hosting providers
+- ASNs
+- endpoint concentration zones
 
-This field is built from the collector's `country` output. In this project that value can come from several places:
+### Linked Filtering
 
-- provider API metadata or server-status metadata;
-- location labels scraped from public provider pages;
-- config/archive filename heuristics where the provider encodes country/city in filenames;
-- local CSV/source metadata;
-- Geo MMDB fallback when the source itself did not provide country/city;
-- older iptoasn country fallback only when no better country value is available.
+Provider, ASN, and country filters dynamically constrain each other and persist in the URL.
 
-That means a row such as:
+### CSV Export
 
-```csv
-provider,country,ip_count
-NordVPN,US,1200
-```
+Export filtered views directly from the dashboard.
 
-should be read as:
+---
 
-> 1,200 observed NordVPN endpoint IPs were reported or enriched as United States endpoints in this snapshot.
+## Dataset Scope
 
-It does **not** mean:
+Current public snapshot includes:
 
-- the provider company is registered in the United States;
-- the ASN owner is registered in the United States;
-- the provider owns the network;
-- all IPs in that country or ASN are VPN;
-- the country is a legal jurisdiction for the VPN brand.
+- VPN-tagged infrastructure only
+- aggregate country and ASN statistics
+- provider-level infrastructure summaries
 
-ASN organization is shown as network/operator context. ASN registration country is a different signal and is not the same as reported endpoint country.
+The project excludes:
 
-Because sources are mixed, country should be treated as practical endpoint-location context, not a hard legal or ownership field.
+- raw VPN IP feeds
+- Tor relay datasets
+- open proxy datasets
+- customer-derived data
+- private provider assets
 
-## License And Legal Notes
-
-Recommended public license for the aggregate CSV and documentation: **CC BY 4.0**.
-
-This repository should not include VPN configuration files, client assets, bearer tokens, account-derived files, APK extracts, raw provider responses, or private mirror artifacts.
-
-The published data is infrastructure context for research and defensive enrichment. Country, ASN, hosting, and provider labels are not claims of ownership, affiliation, malicious behavior, or abuse.
-
-## What This Is Not
-
-This is not a VPN blocklist and not a complete VPN database.
-
-It should not be used to:
-
-- block an entire country, ASN, or hosting provider;
-- claim provider ownership or legal jurisdiction;
-- label every IP in an ASN as VPN;
-- make enforcement decisions without IP-level evidence;
-- treat reported country as a hard legal field.
-
-Use this as aggregate infrastructure context, not final attribution.
+---
 
 ## Data Files
 
 | File | Description |
 |---|---|
-| [`data/provider_country.csv`](data/provider_country.csv) | Provider footprint by endpoint country. Used by the interactive map. |
-| [`data/provider_asn.csv`](data/provider_asn.csv) | Provider footprint by ASN / network operator. Used by the ASN explorer table. |
-| [`data/country_summary.csv`](data/country_summary.csv) | Country-level aggregate footprint across all providers. |
-| [`data/asn_summary.csv`](data/asn_summary.csv) | ASN-level aggregate footprint across all providers. |
-| [`data/metadata.json`](data/metadata.json) | Snapshot generation metadata. |
+| `data/provider_country.csv` | Provider footprint grouped by endpoint country |
+| `data/provider_asn.csv` | Provider footprint grouped by ASN/network |
+| `data/country_summary.csv` | Country-level aggregate statistics |
+| `data/asn_summary.csv` | ASN-level aggregate statistics |
+| `data/metadata.json` | Snapshot generation metadata |
 
-## Safe Use
+---
 
-Good uses:
+## Use Cases
 
-- VPN/proxy detection enrichment;
-- provider footprint research;
-- ASN and hosting-network context;
-- risk feature engineering;
-- source quality review;
-- identifying infrastructure concentration;
-- visual exploration through GitHub Pages.
+- VPN/proxy detection research
+- IP reputation enrichment
+- fraud analytics
+- hosting-network analysis
+- infrastructure concentration studies
+- VPN ecosystem research
+- security telemetry enrichment
+- abuse and risk modeling
 
-Bad uses:
+---
 
-- blocking an entire ASN;
-- claiming provider ownership from country or ASN alone;
-- labeling every IP in a `/24` as VPN;
-- using old snapshots without freshness checks;
-- treating this as a complete VPN database.
+## Country Semantics
+
+Country values represent reported or enriched endpoint-location context derived from public metadata and enrichment pipelines.
+
+They should not be interpreted as:
+
+- provider ownership
+- legal jurisdiction
+- ASN registration country
+- company incorporation location
+
+ASN organization names are shown as infrastructure-hosting context only.
+
+---
+
+## Public Dashboard
+
+The GitHub Pages dashboard is designed for:
+
+- infrastructure exploration
+- research workflows
+- CSV export
+- static hosting
+- lightweight deployment
+
+The site can be hosted directly from:
+
+- GitHub Pages
+- S3/static hosting
+- nginx
+- Cloudflare Pages
+
+---
+
+## License
+
+Apache-2.0
+
+See `LICENSE`.
+
+---
+
+## Disclaimer
+
+This repository is intended for research, defensive security, fraud prevention, and infrastructure analysis purposes.
+
+All trademarks and provider names belong to their respective owners.
