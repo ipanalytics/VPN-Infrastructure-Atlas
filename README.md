@@ -12,7 +12,7 @@ The project provides a static GitHub Pages dashboard and research-oriented aggre
 - security and threat-intelligence enrichment
 
 <p align="center">
-  <img src="./site/banner.png" alt="VPN Infrastructure Atlas" width="100%">
+  <img src="assets/vpn-infrastructure-atlas.jpg" alt="VPN Infrastructure Atlas" width="100%">
 </p>
 
 ## Live Atlas
